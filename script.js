@@ -740,14 +740,20 @@ function initSmoothScroll() {
 
 // ==================== ACTIVE NAV LINK ====================
 function initActiveNavLink() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // Compare clean paths so "/about", "/about.html" and "/index.html" all match their nav link
+  const normalize = (path) => {
+    let p = path.split('#')[0].replace(/\.html$/, '').replace(/\/index$/, '/');
+    if (p.length > 1) p = p.replace(/\/$/, '');
+    return p || '/';
+  };
+  const currentPage = normalize(window.location.pathname);
   const navLinks = document.querySelectorAll('.nav-links a');
 
   navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || 
-        (currentPage === '' && linkPage === 'index.html') ||
-        (currentPage === 'index.html' && linkPage === '/')) {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('http') || href.startsWith('mailto:')) return;
+    const linkPage = normalize(new URL(href, window.location.href).pathname);
+    if (linkPage === currentPage) {
       link.classList.add('active');
     }
   });
