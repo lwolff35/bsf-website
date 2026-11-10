@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="Contact BSF Performance to start your success story and get connected with the right training path for your goals.">
+  <title>Performance Training & Pitching Development</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bsfperformance.com/contact">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bsfperformance.com/contact">
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="Start your success story and get connected with the right baseball or softball training path.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://bsfperformance.com/contact">
+  <meta name="twitter:title" content="Performance Training & Pitching Development">
+  <meta name="twitter:description" content="Start your success story and get connected with the right baseball or softball training path.">
+  <meta name="twitter:image" content="https://bsfperformance.com/images/newfavicon.png">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .funnel-hero {
+      margin-top: 60px;
+      min-height: calc(100vh - 60px);
+      background: var(--bg-primary);
+      display: flex;
+      align-items: stretch;
+      padding: 0;
+    }
+
+    .funnel-shell {
+      width: 100%;
+      max-width: 980px;
+      margin: auto;
+      padding: 2.25rem 0;
+    }
+
+    .funnel-header {
+      margin-bottom: 1.3rem;
+      text-align: center;
+    }
+
+    .funnel-header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4.8vw, 3.35rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+    }
+
+    .funnel-header p {
+      margin: 0.45rem 0 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.04em;
+    }
+
+    .funnel-stage {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.2rem;
+      min-height: 480px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .funnel-stage::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: none;
+      z-index: -2;
+    }
+
+    .funnel-stage::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.18) 100%);
+      z-index: -1;
+    }
+
+    .funnel-progress {
+      margin-bottom: 0.95rem;
+    }
+
+    .funnel-progress-label {
+      margin: 0 0 0.35rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .funnel-progress-track {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--bg-tertiary);
+      overflow: hidden;
+    }
+
+    .funnel-progress-fill {
+      width: 33.333%;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--accent);
+      transition: width 0.24s ease;
+    }
+
+    .funnel-step {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .funnel-step.active {
+      display: block;
+      animation: funnelStepIn 0.28s ease forwards;
+    }
+
+    @keyframes funnelStepIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .funnel-step-title {
+      margin: 0 0 0.75rem;
+      font-size: 1.18rem;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      font-weight: 600;
+    }
+
+    .funnel-grid {
+      display: grid;
+      gap: 0.55rem;
+      grid-template-columns: 1fr;
+    }
+
+    .funnel-grid.two {
+      grid-template-columns: 1fr;
+    }
+
+    .funnel-card {
+      appearance: none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      min-height: 74px;
+      width: 100%;
+      padding: 0.92rem 1rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .funnel-card:hover,
+    .funnel-card:focus-visible {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      background: var(--bg-elevated);
+      outline: none;
+    }
+
+    .funnel-card::after {
+      content: '>';
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1;
+      margin-left: 0.9rem;
+      transform: translateX(0);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .funnel-card:hover::after,
+    .funnel-card:focus-visible::after {
+      color: var(--text-primary);
+      transform: translateX(2px);
+    }
+
+    .funnel-card-title {
+      font-size: 1.08rem;
+      font-weight: 650;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+    }
+
+    .funnel-card[disabled] {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .funnel-card.is-hidden {
+      display: none !important;
+    }
+
+    .funnel-inline-note {
+      margin-top: 0.85rem;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      min-height: 1.2em;
+    }
+
+    .funnel-location-disclaimer {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      min-height: 1.2em;
+    }
+
+    .funnel-back {
+      margin-top: 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-primary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.42rem 0.85rem;
+      cursor: pointer;
+    }
+
+    .funnel-result-panel {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg-tertiary);
+      padding: 1.1rem;
+    }
+
+    .funnel-breadcrumb {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .funnel-cta {
+      margin-top: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      border-radius: 999px;
+      padding: 0.7rem 1.05rem;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #0f1318;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .funnel-email {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 980px) {
+      .funnel-hero {
+        min-height: calc(100vh - 60px);
+      }
+
+      .funnel-shell {
+        padding: 1.4rem 0;
+      }
+
+      .funnel-grid,
+      .funnel-grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .funnel-card {
+        min-height: 68px;
+      }
+
+      .funnel-card-title {
+        font-size: 1rem;
+      }
+
+      .funnel-stage {
+        min-height: 460px;
+      }
+
+      .funnel-stage::before {
+        background-position: center top;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="images/bsflogo.webp" alt="BSF Performance" class="logo-img" height="36"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Locations <span>▼</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="locations/lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="remote.html">Remote</a></li>
+        <li><a href="success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">About <span>▼</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="difference.html">The BSF Difference</a>
+            <a href="about.html">Coaches</a>
+            <a href="training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="locations/lockport.html">Lockport, IL</a>
+          <a href="locations/bensenville.html">Bensenville, IL</a>
+          <a href="locations/columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+      
+      <a href="remote.html" class="mobile-nav-item">Remote</a>
+      <a href="success.html" class="mobile-nav-item">Athlete Success</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="difference.html">The BSF Difference</a>
+          <a href="about.html">Coaches</a>
+          <a href="training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <section class="funnel-hero" id="trainingRouteFunnel">
+    <div class="container">
+      <div class="funnel-shell" id="routeFunnelPanel">
+        <div class="funnel-header">
+          <h1>Write Your Success Story</h1>
+          <p>CHOOSE YOUR TRAINING PATH</p>
+        </div>
+
+        <div class="funnel-stage">
+          <div class="funnel-progress" aria-hidden="true">
+            <p class="funnel-progress-label" id="funnelProgressLabel">Step 1 of 3</p>
+            <div class="funnel-progress-track">
+              <div class="funnel-progress-fill" id="funnelProgressFill"></div>
+            </div>
+          </div>
+
+          <div class="funnel-step active" id="routeStep1">
+            <h2 class="funnel-step-title">Training Type</h2>
+            <div class="funnel-grid two">
+              <button type="button" class="funnel-card" data-step="type" data-value="in-house">
+                <span class="funnel-card-title">In-House</span>
+              </button>
+              <button type="button" class="funnel-card" data-step="type" data-value="remote">
+                <span class="funnel-card-title">Remote</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="funnel-step" id="routeStep2">
+            <h2 class="funnel-step-title">Program</h2>
+            <div class="funnel-grid">
+              <button type="button" class="funnel-card" data-step="program" data-value="pitching">
+                <span class="funnel-card-title">Pitching Performance</span>
+              </button>
+              <button type="button" class="funnel-card" data-step="program" data-value="strength-and-conditioning">
+                <span class="funnel-card-title">Strength &amp; Conditioning</span>
+              </button>
+              <button type="button" class="funnel-card" data-step="program" data-value="fastpitch">
+                <span class="funnel-card-title">Fastpitch</span>
+              </button>
+            </div>
+            <button type="button" class="funnel-back" id="funnelBackFromProgram">Back</button>
+          </div>
+
+          <div class="funnel-step" id="routeStep3">
+            <h2 class="funnel-step-title">Location</h2>
+            <div class="funnel-grid">
+              <button type="button" class="funnel-card" data-step="location" data-value="lockport">
+                <span class="funnel-card-title">Lockport, IL</span>
+              </button>
+              <button type="button" class="funnel-card" data-step="location" data-value="bensenville">
+                <span class="funnel-card-title">Bensenville, IL</span>
+              </button>
+              <button type="button" class="funnel-card" data-step="location" data-value="columbus">
+                <span class="funnel-card-title">Columbus, OH</span>
+              </button>
+            </div>
+            <p class="funnel-location-disclaimer" id="fastpitchLocationNotice"></p>
+            <p class="funnel-inline-note" id="metricTestingNotice"></p>
+            <button type="button" class="funnel-back" id="funnelBackFromLocation">Back</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-form-section">
+    <div class="container">
+      <div class="contact-form-wrapper">
+        <div class="form-header">
+          <span class="form-label">REACH OUT</span>
+          <h2>Request More Information</h2>
+          <p class="form-description">Have questions before signing up? Email us and a performance coach will follow up with the right guidance.</p>
+        </div>
+        
+        <div class="contact-email-block" id="contactEmail">
+          <a href="mailto:info@bsfperformance.com" class="contact-email-address">info@bsfperformance.com</a>
+          <p class="contact-email-hint">Include your name, phone number, training type (in-house or remote), program, and preferred location so we can route you to the right coach.</p>
+          <a href="mailto:info@bsfperformance.com?subject=Training%20Inquiry" class="btn-modern btn-primary-modern">
+            <span>Email Us</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT TEAM SECTION -->
+  <section class="contact-team-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-label">OUR TEAM</span>
+        <h2>Connect With Our Coaches</h2>
+        <p class="section-description">Reach out directly to our performance staff for location-specific questions and program details.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <!-- Lockport -->
+        <div class="location-contact-group">
+          <div class="location-header">
+            <h3>Lockport, IL</h3>
+            <p class="location-address">Bo Jackson's Elite Sports Domes<br>16333 S 159th St, Lockport, IL 60441</p>
+          </div>
+          
+          <div class="staff-cards">
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Ryan McWilliams</h4>
+                <span class="staff-role">Director of Pitching Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="tel:+18153702773" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>(815) 370-2773</span>
+                </a>
+                <a href="mailto:rmcwilliams@bojacksonselitesports.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>rmcwilliams@bojacksonselitesports.com</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Brett Velon</h4>
+                <span class="staff-role">Director of Sports Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:brett@bojacksonselitesports.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>brett@bojacksonselitesports.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bensenville -->
+        <div class="location-contact-group">
+          <div class="location-header">
+            <h3>Bensenville, IL</h3>
+            <p class="location-address">Bo Jackson's Elite Sports Domes<br>650 W Thorndale Ave, Bensenville, IL 60106</p>
+          </div>
+          
+          <div class="staff-cards">
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Logan Schmitt</h4>
+                <span class="staff-role">Director of Pitching Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:LSchmitt@bjesbensenville.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>LSchmitt@bjesbensenville.com</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>James Young</h4>
+                <span class="staff-role">Director of Sports Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="tel:+16307037254" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>(630) 703-7254</span>
+                </a>
+                <a href="mailto:jyoung@bjesbensenville.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>jyoung@bjesbensenville.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Natalie Reuchel</h4>
+                <span class="staff-role">Director of Fastpitch Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:nruechel@bjesbensenville.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>nruechel@bjesbensenville.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Columbus -->
+        <div class="location-contact-group">
+          <div class="location-header">
+            <h3>Columbus, OH</h3>
+            <p class="location-address">Bo Jackson's Elite Sports<br>4696 Cosgray Road, Hilliard, OH 43026</p>
+          </div>
+          
+          <div class="staff-cards">
+            
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Gehrig Diemoz</h4>
+                <span class="staff-role">Director of Sports Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:Gdiemoz@bjescolumbus.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>Gdiemoz@bjescolumbus.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remote -->
+        <div class="location-contact-group">
+          <div class="location-header">
+            <h3>Remote</h3>
+            <p class="location-address">Train from anywhere.</p>
+          </div>
+
+          <div class="staff-cards">
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Collin Sharman</h4>
+                <span class="staff-role">Director of Remote Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:csharman@bsfperformance.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>csharman@bsfperformance.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-modern">
+    <div class="container">
+      <div class="cta-content">
+        <span class="cta-label">TRAINING</span>
+        <h2>Ready to Start Training?</h2>
+        <p>Share your goals and we will connect you with the right performance coach.</p>
+        <a href="#contactEmail" class="btn-modern btn-primary-modern">
+          <span>Start My Success Story</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="images/bsflogo.webp" alt="BSF Performance logo">
+            </a>
+            <p class="footer-tagline">Bigger. Stronger. Faster.</p>
+            <p class="footer-sub">Train where development meets measurable performance.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="difference.html">The BSF Difference</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="locations/lockport.html">Lockport</a></li>
+            <li><a href="locations/bensenville.html">Bensenville</a></li>
+            <li><a href="locations/columbus.html">Columbus</a></li>
+            <li><a href="remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="success.html">Athlete Success</a></li>
+            <li><a href="about.html">About & Coaches</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & App -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+          <div class="footer-app-badge" style="margin-top: 1.25rem;">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" style="max-width: 140px; width: 100%; height: auto; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "BSF Performance",
+    "description": "Data-driven baseball and softball performance training facilities in Illinois and Ohio.",
+    "url": "https://bsfperformance.com",
+    "logo": "https://bsfperformance.com/images/newfavicon.png",
+    "image": "https://bsfperformance.com/images/hero01.webp",
+    "telephone": "+1-815-370-2773",
+    "email": "info@bsfperformance.com",
+    "sameAs": [
+      "https://www.instagram.com/bsfperformance/",
+      "https://x.com/BSFpitching",
+      "https://www.youtube.com/@bsf_pitching"
+    ],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "BSF Performance - Lockport",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "16333 S 159th St",
+          "addressLocality": "Lockport",
+          "addressRegion": "IL",
+          "postalCode": "60441",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "BSF Performance - Bensenville",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "650 W Thorndale Ave",
+          "addressLocality": "Bensenville",
+          "addressRegion": "IL",
+          "postalCode": "60106",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "BSF Performance - Columbus",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4696 Cosgray Road",
+          "addressLocality": "Hilliard",
+          "addressRegion": "OH",
+          "postalCode": "43026",
+          "addressCountry": "US"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    (function () {
+      const funnelRoot = document.getElementById('routeFunnelPanel');
+      if (!funnelRoot) return;
+
+      const steps = {
+        step1: document.getElementById('routeStep1'),
+        step2: document.getElementById('routeStep2'),
+        step3: document.getElementById('routeStep3')
+      };
+
+      const notice = document.getElementById('metricTestingNotice');
+      const fastpitchLocationNotice = document.getElementById('fastpitchLocationNotice');
+      const progressLabel = document.getElementById('funnelProgressLabel');
+      const progressFill = document.getElementById('funnelProgressFill');
+
+      const state = {
+        trainingType: '',
+        program: '',
+        location: ''
+      };
+
+      const routes = {
+        'in-house|pitching|lockport': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=3985399'
+        },
+        'in-house|strength-and-conditioning|lockport': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=3361016#SelectRegistrationType'
+        },
+        'in-house|pitching|bensenville': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=6666&GroupID=4117181'
+        },
+        'in-house|strength-and-conditioning|bensenville': {
+          destination: 'mailto:jyoung@bjesbensenville.com',
+          subject: 'BSF In-House Strength and Conditioning Inquiry - Bensenville'
+        },
+        'in-house|fastpitch|bensenville': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=6666&GroupID=3893810'
+        },
+        'in-house|pitching|columbus': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5351&GroupID=3740723'
+        },
+        'in-house|strength-and-conditioning|columbus': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5351&GroupID=3777473#SelectRegistrationType'
+        },
+        'remote|pitching|remote': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=3361021'
+        },
+        'remote|strength-and-conditioning|remote': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=3361018'
+        },
+        'remote|fastpitch|remote': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=6666&GroupID=3893826&utm_source=ig&utm_medium=social&utm_content=link_in_bio'
+        }
+      };
+
+      const locationButtons = Array.from(funnelRoot.querySelectorAll('[data-step="location"]'));
+
+      function showStep(stepElement) {
+        Object.values(steps).forEach((el) => {
+          el.classList.remove('active');
+        });
+        stepElement.classList.add('active');
+        updateProgress(stepElement);
+        updateMetricNotice();
+      }
+
+      function getTotalSteps() {
+        if (steps.step1.classList.contains('active')) {
+          return 3;
+        }
+
+        // Remote selections route directly after Program, so they are a 2-step path.
+        return state.trainingType === 'remote' ? 2 : 3;
+      }
+
+      function updateProgress(stepElement) {
+        if (!progressLabel || !progressFill) return;
+
+        const total = getTotalSteps();
+        let current = 1;
+        if (stepElement === steps.step2) {
+          current = 2;
+        } else if (stepElement === steps.step3) {
+          current = 3;
+        }
+
+        const clampedCurrent = Math.min(current, total);
+        progressLabel.textContent = `Step ${clampedCurrent} of ${total}`;
+        progressFill.style.width = `${(clampedCurrent / total) * 100}%`;
+      }
+
+      function updateMetricNotice() {
+        const isStep3Active = steps.step3.classList.contains('active');
+        const requiresMetricTesting = state.trainingType === 'in-house' && (state.program === 'pitching' || state.program === 'fastpitch');
+
+        if (isStep3Active && requiresMetricTesting) {
+          notice.textContent = 'This program requires a Metric Testing Evaluation before enrollment.';
+        } else {
+          notice.textContent = '';
+        }
+      }
+
+      function setLocationAvailability() {
+        const onlyBensenville = state.program === 'fastpitch';
+        locationButtons.forEach((button) => {
+          const isBensenville = button.dataset.value === 'bensenville';
+          button.disabled = false;
+          const shouldHide = onlyBensenville && !isBensenville;
+          button.hidden = shouldHide;
+          button.classList.toggle('is-hidden', shouldHide);
+        });
+
+        if (fastpitchLocationNotice) {
+          fastpitchLocationNotice.textContent = onlyBensenville
+            ? 'Fastpitch is currently available only at Bensenville.'
+            : '';
+        }
+      }
+
+      function goToRoute() {
+        const resolvedLocation = state.trainingType === 'remote' ? 'remote' : state.location;
+        const routeKey = `${state.trainingType}|${state.program}|${resolvedLocation}`;
+        const route = routes[routeKey];
+        if (!route || !route.destination) return;
+
+        let destination = route.destination;
+        if (destination.startsWith('mailto:') && route.subject) {
+          const separator = destination.includes('?') ? '&' : '?';
+          destination = `${destination}${separator}subject=${encodeURIComponent(route.subject)}`;
+        }
+
+        window.open(destination, '_blank', 'noopener');
+      }
+
+      funnelRoot.querySelectorAll('[data-step="type"]').forEach((button) => {
+        button.addEventListener('click', () => {
+          state.trainingType = button.dataset.value;
+          state.program = '';
+          state.location = '';
+          notice.textContent = '';
+          showStep(steps.step2);
+        });
+      });
+
+      funnelRoot.querySelectorAll('[data-step="program"]').forEach((button) => {
+        button.addEventListener('click', () => {
+          if (!state.trainingType) return;
+          state.program = button.dataset.value;
+          state.location = '';
+
+          if (state.trainingType === 'remote') {
+            goToRoute();
+            return;
+          }
+
+          setLocationAvailability();
+          showStep(steps.step3);
+        });
+      });
+
+      locationButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (!state.trainingType || !state.program || button.disabled) return;
+          state.location = button.dataset.value;
+          goToRoute();
+        });
+      });
+
+      document.getElementById('funnelBackFromProgram').addEventListener('click', () => {
+        state.trainingType = '';
+        state.program = '';
+        state.location = '';
+        notice.textContent = '';
+        showStep(steps.step1);
+      });
+
+      document.getElementById('funnelBackFromLocation').addEventListener('click', () => {
+        state.location = '';
+        showStep(steps.step2);
+      });
+
+      updateProgress(steps.step1);
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

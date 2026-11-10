@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="Data-driven strength and conditioning built around the individual athlete. Improve speed, power, and durability with personalized performance training at BSF Performance in IL and OH.">
+  <title>Performance Training & Pitching Development</title>
+  <link rel="canonical" href="https://bsfperformance.com/strength-conditioning">
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="Data-driven strength and conditioning built around the individual athlete. Improve speed, power, and durability with personalized performance training at BSF Performance in IL and OH.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <meta property="og:url" content="https://bsfperformance.com/strength-conditioning">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="images/sc.webp">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-centered {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 60px);
+      margin: 60px 0 0 0;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+    
+    .hero-image-side {
+      flex: 0 0 60%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%) contrast(1.08) brightness(0.95);
+      z-index: 1;
+    }
+    
+    .hero-content-side {
+      flex: 0 0 40%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background: #0a0a0a;
+      z-index: 2;
+    }
+    
+    .hero-content-side::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 0.42s ease-out 0.08s forwards;
+      transform: translateY(40px);
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    .intro-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .program-fit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+
+    .program-fit-grid > .reveal,
+    .semiprivate-carousel-track > div > div {
+      border-color: rgba(0,0,0,0.08) !important;
+      border-radius: 6px !important;
+      box-shadow: none !important;
+      padding: 2rem 1.5rem !important;
+      min-height: 240px !important;
+    }
+
+    .program-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .program-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .program-bullet {
+      display: none;
+    }
+
+    .program-item-text {
+      color: rgba(0,0,0,0.8);
+      line-height: 1.6;
+      margin: 0;
+      text-align: left;
+    }
+
+    .final-cta-btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 968px) {
+      .hero-centered {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+      
+      .hero-image-side {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+      }
+      
+      .hero-content-side {
+        flex: none;
+        min-height: auto;
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hero-content-side::before {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      }
+      
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-image-side {
+        height: 44vh;
+      }
+
+      .hero-background-image {
+        object-position: center 24%;
+      }
+
+      .semiprivate-carousel-wrapper {
+        overflow: hidden !important;
+        margin: 0 !important;
+      }
+
+      .semiprivate-carousel-track {
+        width: 600% !important;
+        display: flex !important;
+        touch-action: pan-y;
+      }
+
+      .semiprivate-carousel-track > div {
+        width: 16.666% !important;
+        flex: 0 0 16.666% !important;
+        padding: 0 8px !important;
+      }
+
+      .semiprivate-carousel-prev,
+      .semiprivate-carousel-next,
+      .semiprivate-dot {
+        display: flex !important;
+      }
+
+      .semiprivate-carousel-prev,
+      .semiprivate-carousel-next {
+        width: 40px !important;
+        height: 40px !important;
+      }
+
+      .program-fit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .program-list {
+        gap: 0.85rem;
+      }
+
+      .program-item-text {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+      }
+
+      .accordion-header {
+        min-height: 44px;
+      }
+
+      .pricing-card,
+      .pricing-card-single {
+        width: 100% !important;
+      }
+
+      .final-cta-btn {
+        width: 100%;
+        min-height: 52px;
+      }
+
+    }
+
+    @media (min-width: 969px) {
+      .overview-cta-wrap {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="images/bsflogo.webp" alt="BSF Performance" class="logo-img" width="124" height="36"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Locations <span>▼</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="locations/lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="remote.html">Remote</a></li>
+        <li><a href="success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">About <span>▼</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="difference.html">The BSF Difference</a>
+            <a href="about.html">Coaches</a>
+            <a href="training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="locations/lockport.html">Lockport, IL</a>
+          <a href="locations/bensenville.html">Bensenville, IL</a>
+          <a href="locations/columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+      
+      <a href="remote.html" class="mobile-nav-item">Remote</a>
+      <a href="success.html" class="mobile-nav-item">Athlete Success</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="difference.html">The BSF Difference</a>
+          <a href="about.html">Coaches</a>
+          <a href="training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-centered">
+    <div class="hero-image-side">
+      <img src="images/sc.webp" alt="Athletes training in the BSF Performance strength and conditioning facility" class="hero-background-image" width="1600" height="1067">
+    </div>
+    
+    <div class="hero-content-side">
+      <div class="hero-content">
+        <h1 class="hero-title">STRENGTH &<br>CONDITIONING</h1>
+        <p class="hero-subtitle">Individualized performance training for athletes who want to get stronger, move better, and stay durable year-round.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM OVERVIEW -->
+  <section class="section-dark">
+    <div class="container intro-wrap">
+      <div class="reveal" style="border-left: 4px solid var(--accent); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); color: var(--accent); margin-bottom: 1rem; line-height: 1.2;">
+          Built for your body. Backed by data.
+        </h2>
+      </div>
+      <div class="reveal">
+        <p class="subtext" style="margin-bottom: 1rem;">
+          Every athlete starts with a clear development plan. From strength and power to movement quality and durability, training is adjusted to your goals, training age, and competitive schedule.
+        </p>
+        <div class="overview-cta-wrap">
+          <a href="contact.html" class="btn btn-primary">GET STARTED</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROGRAM -->
+  <section class="section-light" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal">THE PROGRAM</span>
+        <h2 class="reveal" style="margin-bottom: 1rem;">WHAT'S INCLUDED & WHO WE TRAIN</h2>
+        <p class="reveal" style="max-width: 800px; margin: 0 auto; color: rgba(0,0,0,0.7);">
+          A complete performance system for athletes who need structure, measurable progress, and coaching that adapts throughout the year.
+        </p>
+      </div>
+
+      <!-- Program Fit Section -->
+      <div class="program-fit-grid">
+
+        <!-- Card: IDEAL FOR -->
+        <div class="reveal" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; transition: all 0.3s ease;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #0a0a0a; font-weight: 700; text-align: center;">Ideal For</h3>
+          <ul class="program-list">
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Athletes ages 12+ who want better strength and movement</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Multi-sport athletes building speed, power, and coordination</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Youth and high school athletes needing structure</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Athletes who want accountable coaching and a clear long-term progression</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card: REQUIREMENTS -->
+        <div class="reveal" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; transition: all 0.3s ease;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #0a0a0a; font-weight: 700; text-align: center;">Requirements</h3>
+          <ul class="program-list">
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Commitment to a consistent weekly training schedule based on your goals and season.</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Coachability and consistent effort during sessions</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">Consistency with training, recovery habits, and communication with your coach</p>
+            </li>
+            <li class="program-list-item">
+              <span class="program-bullet" aria-hidden="true"></span>
+              <p class="program-item-text">A positive team attitude and readiness to train with intent</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Program Components Carousel -->
+      <div style="position: relative; max-width: 1100px; margin: 0 auto 4rem;">
+        <div class="semiprivate-carousel-wrapper" style="overflow: hidden; margin: 0 70px;">
+          <div class="semiprivate-carousel-track" style="display: flex; width: 600%; transition: transform 0.32s ease;">
+            
+            <!-- Card 1: CUSTOM PROGRAMMING -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">Custom Programming</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Your plan is built from training history, goals, and competitive demands.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: COACH-LED TRAINING -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">Coach-Led Sessions</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Every session is coached with technical intent, progression targets, and real-time adjustments.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: SPEED & POWER DEVELOPMENT -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">Speed & Power Development</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Build explosive power and acceleration with intentional coaching progressions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: STRENGTH TRAINING -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">Strength Training</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Build foundational strength, force production, and resilience.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 5: PROGRESS TRACKING -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">Progress Tracking</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Ongoing performance tracking shows progress and guides training updates.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 6: BSF APP ACCESS -->
+            <div style="width: 16.666%; padding: 0 15px; box-sizing: border-box;">
+              <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2.5rem 2rem; min-height: 280px;">
+                <h3 style="font-size: 1.375rem; margin-bottom: 0.75rem; color: #0a0a0a; font-weight: 700;">BSF App Access</h3>
+                <p style="color: rgba(0,0,0,0.7); line-height: 1.7; margin: 0;">
+                  Your training plan and progress tracking are all in the BSF App.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="semiprivate-carousel-prev" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background: #ffffff; border: 1px solid rgba(0,0,0,0.12); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0a0a0a;">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="semiprivate-carousel-next" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background: #ffffff; border: 1px solid rgba(0,0,0,0.12); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #0a0a0a;">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Carousel Dots -->
+        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 2rem;">
+          <button class="semiprivate-dot" data-index="0" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+          <button class="semiprivate-dot" data-index="1" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+          <button class="semiprivate-dot" data-index="2" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+          <button class="semiprivate-dot" data-index="3" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+          <button class="semiprivate-dot" data-index="4" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+          <button class="semiprivate-dot" data-index="5" style="width: 10px; height: 10px; border-radius: 50%; background: transparent; border: 2px solid rgba(0,0,0,0.3); cursor: pointer; transition: all 0.3s ease; padding: 0;"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-dark" style="padding: 4rem 0;">
+    <div class="container text-center">
+      <h2 class="reveal" style="margin-bottom: 1rem;">READY TO GET STARTED?</h2>
+      <p class="subtext reveal" style="max-width: 600px; margin: 0 auto 2rem;">
+        Meet with a BSF performance coach and start a personalized strength and conditioning plan built for your goals.
+      </p>
+      <a href="contact.html" class="btn btn-primary reveal final-cta-btn">START YOUR TRAINING</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="images/bsflogo.webp" alt="BSF Performance logo" loading="lazy" width="220" height="64">
+            </a>
+            <p class="footer-tagline">Bigger. Stronger. Faster.</p>
+            <p class="footer-sub">Train where development meets measurable performance.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="difference.html">The BSF Difference</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="locations/lockport.html">Lockport</a></li>
+            <li><a href="locations/bensenville.html">Bensenville</a></li>
+            <li><a href="locations/columbus.html">Columbus</a></li>
+            <li><a href="remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="success.html">Athlete Success</a></li>
+            <li><a href="about.html">About & Coaches</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & App -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+          <div class="footer-app-badge" style="margin-top: 1.25rem;">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" loading="lazy" width="140" height="42" style="max-width: 140px; width: 100%; height: auto; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // STRENGTH & CONDITIONING CAROUSEL
+    let semiprivateCurrentSlide = 0;
+    const semiprivateTotalSlides = 6;
+    let semiprivateTouchStartX = 0;
+    let semiprivateTouchEndX = 0;
+
+    function moveSemiprivateCarousel(direction) {
+      semiprivateCurrentSlide += direction;
+      if (semiprivateCurrentSlide < 0) semiprivateCurrentSlide = semiprivateTotalSlides - 1;
+      if (semiprivateCurrentSlide >= semiprivateTotalSlides) semiprivateCurrentSlide = 0;
+      updateSemiprivateCarousel();
+    }
+
+    function goToSemiprivateSlide(index) {
+      semiprivateCurrentSlide = index;
+      updateSemiprivateCarousel();
+    }
+
+    function updateSemiprivateCarousel() {
+      const track = document.querySelector('.semiprivate-carousel-track');
+      const dots = document.querySelectorAll('.semiprivate-dot');
+      
+      if (!track) return;
+      
+      const translateValue = semiprivateCurrentSlide * -16.666;
+      track.style.transform = `translateX(${translateValue}%)`;
+      
+      dots.forEach((dot, index) => {
+        if (index === semiprivateCurrentSlide) {
+          dot.style.background = '#0a0a0a';
+          dot.style.transform = 'scale(1.3)';
+          dot.style.border = '2px solid #0a0a0a';
+        } else {
+          dot.style.background = 'transparent';
+          dot.style.transform = 'scale(1)';
+          dot.style.border = '2px solid rgba(0,0,0,0.3)';
+        }
+      });
+    }
+
+    function handleSemiprivateSwipe() {
+      const swipeDistance = semiprivateTouchStartX - semiprivateTouchEndX;
+      if (Math.abs(swipeDistance) < 40) return;
+      if (swipeDistance > 0) {
+        moveSemiprivateCarousel(1);
+      } else {
+        moveSemiprivateCarousel(-1);
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const nextBtn = document.querySelector('.semiprivate-carousel-next');
+      const prevBtn = document.querySelector('.semiprivate-carousel-prev');
+      const dots = document.querySelectorAll('.semiprivate-dot');
+      const track = document.querySelector('.semiprivate-carousel-track');
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => moveSemiprivateCarousel(1));
+        nextBtn.addEventListener('mouseenter', function() {
+          this.style.borderColor = '#0a0a0a';
+          this.style.transform = 'translateY(-50%) scale(1.05)';
+          this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        });
+        nextBtn.addEventListener('mouseleave', function() {
+          this.style.borderColor = 'rgba(0,0,0,0.12)';
+          this.style.transform = 'translateY(-50%) scale(1)';
+          this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => moveSemiprivateCarousel(-1));
+        prevBtn.addEventListener('mouseenter', function() {
+          this.style.borderColor = '#0a0a0a';
+          this.style.transform = 'translateY(-50%) scale(1.05)';
+          this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        });
+        prevBtn.addEventListener('mouseleave', function() {
+          this.style.borderColor = 'rgba(0,0,0,0.12)';
+          this.style.transform = 'translateY(-50%) scale(1)';
+          this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        });
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSemiprivateSlide(index));
+      });
+
+      if (track) {
+        track.addEventListener('touchstart', (event) => {
+          semiprivateTouchStartX = event.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (event) => {
+          semiprivateTouchEndX = event.changedTouches[0].screenX;
+          handleSemiprivateSwipe();
+        }, { passive: true });
+      }
+
+      window.addEventListener('resize', updateSemiprivateCarousel);
+      
+      updateSemiprivateCarousel();
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

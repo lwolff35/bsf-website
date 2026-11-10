@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://bsfperformance.com/sitemap.xml
+
+# Block development/build directories
+Disallow: /dist/
+Disallow: /__pycache__/
+Disallow: /*.py$

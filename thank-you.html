@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="Thank you for contacting BSF Performance. We'll be in touch within 24 hours.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Performance Training & Pitching Development</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .thank-you-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      padding: 2rem;
+    }
+    
+    .thank-you-content {
+      max-width: 600px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 4rem 3rem;
+      animation: fadeInUp 0.42s ease-out;
+    }
+    
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      animation: scaleIn 0.5s ease-out 0.3s both;
+    }
+    
+    .checkmark svg {
+      width: 40px;
+      height: 40px;
+      stroke: white;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    .thank-you-content h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+    
+    .thank-you-content p {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    
+    .thank-you-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes scaleIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .thank-you-content {
+        padding: 3rem 2rem;
+      }
+      
+      .thank-you-content h1 {
+        font-size: 2rem;
+      }
+      
+      .thank-you-actions {
+        flex-direction: column;
+      }
+      
+      .thank-you-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-container">
+    <div class="thank-you-content">
+      <div class="checkmark">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      
+      <h1>Thank You!</h1>
+      
+      <p>You're all set! Expect to hear from one of our performance coaches within 24 hours. Your journey starts now.</p>
+      
+      <div class="thank-you-actions">
+        <a href="index.html" class="btn btn-accent">Return Home</a>
+        <a href="about.html" class="btn btn-secondary">Meet Our Coaches</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Track form conversion
+    if (window.gtag) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+    
+    // Facebook Pixel (if you use it)
+    if (window.fbq) {
+      fbq('track', 'Lead');
+    }
+  </script>
+
+</body>
+</html>

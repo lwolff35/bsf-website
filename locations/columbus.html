@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="Professional baseball and pitching training in Columbus, OH at BSF Performance. Expert coaching with measurable results. Schedule your assessment.">
+  <title>Performance Training & Pitching Development</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bsfperformance.com/locations/columbus">
+  
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="../images/cbus.webp">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="Professional baseball and pitching training in Columbus, OH at BSF Performance. Expert coaching with measurable results. Schedule your assessment.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <meta property="og:url" content="https://bsfperformance.com/locations/columbus">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Performance Training & Pitching Development">
+  <meta name="twitter:description" content="Professional baseball and pitching training in Columbus, OH at BSF Performance. Expert coaching with measurable results. Schedule your assessment.">
+  <meta name="twitter:image" content="https://bsfperformance.com/images/newfavicon.png">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- LocalBusiness JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "@id": "https://bsfperformance.com/locations/columbus",
+    "name": "BSF Performance - Columbus",
+    "url": "https://bsfperformance.com/locations/columbus",
+    "telephone": "+1-815-370-2773",
+    "email": "info@bsfperformance.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4696 Cosgray Road, Bo Jackson's Elite Sports",
+      "addressLocality": "Hilliard",
+      "addressRegion": "OH",
+      "postalCode": "43026",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.050,
+      "longitude": -83.135
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "06:00",
+        "closes": "20:00"
+      }
+    ],
+    "image": "https://bsfperformance.com/images/cbus.webp",
+    "priceRange": "$$-$$$",
+    "sportsActivityLocation": ["Baseball Training", "Pitching Development", "Strength & Conditioning"],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "BSF Performance",
+      "url": "https://bsfperformance.com/"
+    }
+  }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-centered {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+    
+    .hero-image-side {
+      flex: 0 0 60%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%) contrast(1.08) brightness(0.95);
+      z-index: 1;
+    }
+    
+    .hero-content-side {
+      flex: 0 0 40%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background: #0a0a0a;
+      z-index: 2;
+    }
+    
+    .hero-content-side::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 0.42s ease-out 0.08s forwards;
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .hero-ctas {
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .hero-ctas .btn {
+      min-width: 220px;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .hero-content {
+      transform: translateY(40px);
+    }
+    
+    @media (max-width: 968px) {
+      .hero-centered {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 0;
+      }
+      
+      .hero-image-side {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+      }
+      
+      .hero-content-side {
+        flex: none;
+        min-height: auto;
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hero-content {
+        text-align: center;
+      }
+      
+      .hero-content-side::before {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      }
+      
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-ctas {
+        gap: 1rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .hero-centered {
+        min-height: auto;
+      }
+      
+      .hero-image-side {
+        height: 45vh;
+      }
+      
+      .hero-content-side {
+        min-height: 55vh;
+        padding: 2rem 1.5rem;
+      }
+      
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+      }
+      
+      .hero-ctas .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    /* Mobile-only carousels */
+    @media (max-width: 768px) {
+      .facility-desktop { display: none !important; }
+      .facility-mobile { display: block !important; }
+      .coaches-desktop { display: none !important; }
+      .coaches-mobile { display: block !important; }
+
+      #location {
+        padding: 1.5rem 0 !important;
+      }
+
+      #location .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+
+      #location .grid-2 > div:last-child {
+        margin-top: 1.5rem;
+      }
+
+      #location iframe {
+        height: 280px !important;
+      }
+
+      #location h2 {
+        font-size: 1.75rem !important;
+      }
+
+      #location h3 {
+        font-size: 1.125rem !important;
+      }
+
+      #location .subtext {
+        font-size: 0.95rem !important;
+      }
+
+      #pricing {
+        padding: 2rem 0 !important;
+      }
+
+      #pricing .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+
+      #pricing .pricing-card {
+        padding: 1.5rem !important;
+      }
+
+      #pricing h3 {
+        font-size: 1.25rem !important;
+      }
+
+      #pricing .pricing-amount {
+        font-size: 2.5rem !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .facility-mobile { display: none !important; }
+      .coaches-mobile { display: none !important; }
+    }
+    
+    /* Facility image color toggle */
+    .facility-image {
+      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .facility-image.colored {
+      filter: grayscale(0%) contrast(1.1) brightness(1.05) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="https://bsfperformance.com/images/bsflogo.webp" alt="BSF Performance" class="logo-img" height="36">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            Locations
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="../remote.html">Remote</a></li>
+        <li><a href="../success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="../difference.html">The BSF Difference</a>
+            <a href="../about.html">Coaches</a>
+            <a href="../training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="../contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="../index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="lockport.html">Lockport, IL</a>
+          <a href="bensenville.html">Bensenville, IL</a>
+          <a href="columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+      
+      <a href="../remote.html" class="mobile-nav-item">Remote</a>
+      <a href="../success.html" class="mobile-nav-item">Athlete Success</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="../difference.html">The BSF Difference</a>
+          <a href="../about.html">Coaches</a>
+          <a href="../training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="../contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <!-- SECTION 1: LOCATION HERO -->
+  <section class="hero-centered">
+    <!-- Left Side: Image -->
+    <div class="hero-image-side">
+      <img src="../images/cbus.webp" alt="Professional baseball pitching training facility at BSF Performance Columbus Ohio" class="hero-background-image" width="1920" height="1080">
+    </div>
+    
+    <!-- Right Side: Content -->
+    <div class="hero-content-side">
+      <div class="hero-content">
+        <h1 class="hero-title">COLUMBUS, OH</h1>
+        <p class="hero-subtitle">Inside Bo Jackson's Elite Sports</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: PROGRAMS -->
+  <section id="programs" class="section-light" style="padding: 3rem 0; scroll-margin-top: 72px;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="eyebrow" style="display: block; margin-bottom: 0.5rem;">AVAILABLE PROGRAMS</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">TRAIN WITH US</h2>
+      </div>
+      
+      <!-- Programs Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        
+        <!-- Pitching Performance -->
+        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.08); padding: 2rem; border-radius: 8px; transition: all 0.3s ease;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.875rem; color: #0a0a0a; text-transform: uppercase;">PITCHING PERFORMANCE</h3>
+          <p style="color: rgba(0,0,0,0.85); margin-bottom: 1.25rem; line-height: 1.6; font-size: 0.95rem;">Comprehensive pitcher development program for Columbus-area athletes. Data-backed training using Trackman technology, customized arm care routines, and sport-specific strength training to elevate performance and reduce injury risk.</p>
+          <a href="../pitching.html" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0a0a0a; text-decoration: none; transition: color 0.2s;">Learn More →</a>
+        </div>
+        
+        <!-- Strength & Conditioning -->
+        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.08); padding: 2rem; border-radius: 8px; transition: all 0.3s ease;">
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.875rem; color: #0a0a0a; text-transform: uppercase;">STRENGTH & CONDITIONING</h3>
+          <p style="color: rgba(0,0,0,0.85); margin-bottom: 1.25rem; line-height: 1.6; font-size: 0.95rem;">Athlete-focused strength training designed for competitors across sports. Our Columbus program uses proven methods to increase explosiveness, speed, and functional athleticism at every level.</p>
+          <a href="../strength-conditioning.html" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0a0a0a; text-decoration: none; transition: color 0.2s;">Learn More →</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: LOCATION & HOURS -->
+  <section id="location" class="section-light" style="padding: 2rem 0; scroll-margin-top: 72px;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="eyebrow" style="display: block; margin-bottom: 0.5rem;">FIND US</span>
+        <h2 style="font-size: 2rem; font-weight: 700;">LOCATION & HOURS</h2>
+      </div>
+      
+      <div class="grid grid-2" style="gap: 1.5rem; align-items: start;">
+        <!-- Map -->
+        <div style="overflow: hidden; height: 350px;">
+          <iframe 
+            src="https://maps.google.com/maps?q=4696+Cosgray+Road+Hilliard+OH+43026&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: grayscale(20%) brightness(0.9) contrast(1.1);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        
+        <!-- Address & Hours -->
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 1rem; font-weight: 600;">Visit Us</h3>
+          
+          <div style="margin-bottom: 1rem;">
+            <h4 style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem;">Address</h4>
+            <p class="subtext" style="font-size: 1rem; line-height: 1.6;">
+              Bo Jackson's Elite Sports — Columbus<br>
+              4696 Cosgray Road<br>
+              Hilliard, OH 43026
+            </p>
+            <p style="font-size: 0.875rem; color: rgba(0,0,0,0.6); margin-top: 0.75rem; font-style: italic;">
+              Located in Hilliard — just minutes from Columbus, Dublin, and Upper Arlington
+            </p>
+          </div>
+          
+          <div>
+            <h4 style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem;">Hours</h4>
+            <p class="subtext" style="font-size: 1rem; line-height: 1.6;">
+              Open 6 days per week<br>
+              Hours vary seasonally
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: INSIDE THE FACILITY -->
+  <section id="facility" class="section-light" style="padding: 3rem 0 0.5rem 0; scroll-margin-top: 72px;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="eyebrow" style="display: block; margin-bottom: 0.5rem;">IN ACTION</span>
+        <h2 style="font-size: 2.5rem; font-weight: 700;">TRAINING & FACILITY</h2>
+      </div>
+      
+      <!-- Modern Collage Grid - 5 Images -->
+      <div class="facility-desktop" style="display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(2, 280px); gap: 0.75rem; max-width: 1400px; margin: 0 auto;">
+        
+        <!-- Large Featured Vertical - Left side, spans 2 rows -->
+        <div style="grid-column: 1 / 5; grid-row: 1 / 3; overflow: hidden; position: relative; background: #000;">
+          <img src="https://bsfperformance.com/images/cbus94.webp" 
+               alt="Baseball athlete training at BSF Performance Columbus Ohio facility" 
+               width="800" height="1200" loading="lazy"
+               class="facility-image"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+               onclick="toggleImageColor(this)"
+               onmouseover="if(!this.classList.contains('colored')) { this.style.transform='scale(1.05)'; this.style.filter='grayscale(0%) contrast(1.1) brightness(1.05)'; }"
+               onmouseout="if(!this.classList.contains('colored')) { this.style.transform='scale(1)'; this.style.filter='grayscale(100%) contrast(1.1) brightness(0.95)'; }">
+        </div>
+        
+        <!-- Top Right Square -->
+        <div style="grid-column: 5 / 8; grid-row: 1 / 2; overflow: hidden; position: relative; background: #000;">
+          <img src="https://bsfperformance.com/images/cbus96.webp" 
+               alt="Pitching training and velocity development at BSF Columbus Hilliard facility" 
+               width="800" height="600" loading="lazy"
+               class="facility-image"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+               onclick="toggleImageColor(this)"
+               onmouseover="if(!this.classList.contains('colored')) { this.style.transform='scale(1.05)'; this.style.filter='grayscale(0%) contrast(1.1) brightness(1.05)'; }"
+               onmouseout="if(!this.classList.contains('colored')) { this.style.transform='scale(1)'; this.style.filter='grayscale(100%) contrast(1.1) brightness(0.95)'; }">
+        </div>
+        
+        <!-- Middle Right Square -->
+        <div style="grid-column: 5 / 8; grid-row: 2 / 3; overflow: hidden; position: relative; background: #000;">
+          <img src="https://bsfperformance.com/images/cbus97.webp" 
+               alt="Performance coaching and assessment at BSF Columbus baseball training facility" 
+               width="800" height="600" loading="lazy"
+               class="facility-image"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+               onclick="toggleImageColor(this)"
+               onmouseover="if(!this.classList.contains('colored')) { this.style.transform='scale(1.05)'; this.style.filter='grayscale(0%) contrast(1.1) brightness(1.05)'; }"
+               onmouseout="if(!this.classList.contains('colored')) { this.style.transform='scale(1)'; this.style.filter='grayscale(100%) contrast(1.1) brightness(0.95)'; }">
+        </div>
+        
+        <!-- Top Right Vertical - cbus99 -->
+        <div style="grid-column: 8 / 11; grid-row: 1 / 3; overflow: hidden; position: relative; background: #000;">
+          <img src="https://bsfperformance.com/images/cbus99.webp" 
+               alt="Indoor baseball training facility with cages at BSF Performance Columbus Ohio" 
+               width="800" height="1200" loading="lazy"
+               class="facility-image"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+               onclick="toggleImageColor(this)"
+               onmouseover="if(!this.classList.contains('colored')) { this.style.transform='scale(1.05)'; this.style.filter='grayscale(0%) contrast(1.1) brightness(1.05)'; }"
+               onmouseout="if(!this.classList.contains('colored')) { this.style.transform='scale(1)'; this.style.filter='grayscale(100%) contrast(1.1) brightness(0.95)'; }">
+        </div>
+        
+        <!-- Far Right Vertical - cbus98 with subject on right -->
+        <div style="grid-column: 11 / 13; grid-row: 1 / 3; overflow: hidden; position: relative; background: #000;">
+          <img src="https://bsfperformance.com/images/cbus98.webp" 
+               alt="Strength and conditioning training area at BSF Columbus Hilliard Ohio location" 
+               width="600" height="1200" loading="lazy"
+               class="facility-image"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: right center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+               onclick="toggleImageColor(this)"
+               onmouseover="if(!this.classList.contains('colored')) { this.style.transform='scale(1.05)'; this.style.filter='grayscale(0%) contrast(1.1) brightness(1.05)'; }"
+               onmouseout="if(!this.classList.contains('colored')) { this.style.transform='scale(1)'; this.style.filter='grayscale(100%) contrast(1.1) brightness(0.95)'; }">
+        </div>
+        
+      </div>
+
+      <!-- Mobile Carousel -->
+      <div class="swiper swiper-mobile facility-mobile">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div style="overflow: hidden; position: relative; background: #000; aspect-ratio: 3/4;">
+              <img src="https://bsfperformance.com/images/cbus94.webp"
+                   alt="Baseball athlete training at BSF Performance Columbus Ohio facility"
+                   loading="lazy"
+                   class="facility-image"
+                   style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+                   onclick="toggleImageColor(this)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div style="overflow: hidden; position: relative; background: #000; aspect-ratio: 3/4;">
+              <img src="https://bsfperformance.com/images/cbus96.webp"
+                   alt="Pitching training and velocity development at BSF Columbus Hilliard facility"
+                   loading="lazy"
+                   class="facility-image"
+                   style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+                   onclick="toggleImageColor(this)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div style="overflow: hidden; position: relative; background: #000; aspect-ratio: 3/4;">
+              <img src="https://bsfperformance.com/images/cbus97.webp"
+                   alt="Performance coaching and assessment at BSF Columbus baseball training facility"
+                   loading="lazy"
+                   class="facility-image"
+                   style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+                   onclick="toggleImageColor(this)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div style="overflow: hidden; position: relative; background: #000; aspect-ratio: 3/4;">
+              <img src="https://bsfperformance.com/images/cbus99.webp"
+                   alt="Indoor baseball training facility with cages at BSF Performance Columbus Ohio"
+                   loading="lazy"
+                   class="facility-image"
+                   style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+                   onclick="toggleImageColor(this)">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div style="overflow: hidden; position: relative; background: #000; aspect-ratio: 3/4;">
+              <img src="https://bsfperformance.com/images/cbus98.webp"
+                   alt="Strength and conditioning training area at BSF Columbus Hilliard Ohio location"
+                   loading="lazy"
+                   class="facility-image"
+                   style="width: 100%; height: 100%; object-fit: cover; object-position: right center; filter: grayscale(100%) contrast(1.1) brightness(0.95);"
+                   onclick="toggleImageColor(this)">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION CTA SECTION -->
+  <section class="section-light" style="padding: 3rem 0;">
+    <div class="container">
+      <div style="text-align: center;">
+        <h2 style="font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem;">Ready to train at BSF Columbus?</h2>
+        <p class="subtext" style="margin-bottom: 1.5rem; opacity: 0.7;">Also available remotely. Location not required.</p>
+        <a href="../contact.html" class="btn btn-accent" style="font-size: 1.125rem; padding: 1rem 3rem;">GET STARTED →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: PRICING -->
+  <section id="pricing" class="section-light" style="padding: 3rem 0; scroll-margin-top: 72px;">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal" style="display: block; margin-bottom: 0.5rem;">INVESTMENT</span>
+        <h2 class="reveal" style="font-size: 2.5rem; font-weight: 700;">PRICING</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Pitching Performance - Month to Month -->
+        <div class="pricing-card reveal stagger-1">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">PITCHING PERFORMANCE</h3>
+          <p class="eyebrow" style="margin-bottom: 1rem;">Month-to-Month</p>
+          <span class="pricing-amount">$400<span style="font-size: 1.125rem; font-weight: 500; color: rgba(0,0,0,0.6);">/mo</span></span>
+          <p class="subtext" style="font-size: 0.9rem; color: rgba(0,0,0,0.7); margin-top: 2rem;">
+            Auto-renewing monthly. Cancel with 30 days written notice.
+          </p>
+          <a href="../contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">GET STARTED</a>
+        </div>
+
+        <!-- Pitching Performance - 12 Month -->
+        <div class="pricing-card reveal stagger-2" style="border: 2px solid var(--accent); position: relative;">
+          <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--bg-primary); padding: 0.5rem 1.5rem; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em;">
+            BEST VALUE
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">PITCHING PERFORMANCE</h3>
+          <p class="eyebrow" style="margin-bottom: 1rem;">Annual Commitment</p>
+          <span class="pricing-amount">$250<span style="font-size: 1.125rem; font-weight: 500; color: rgba(0,0,0,0.6);">/mo</span></span>
+          <p class="subtext" style="font-size: 0.9rem; color: rgba(0,0,0,0.7); margin-top: 2rem;">
+            12-month commitment. Early cancellation fees apply.
+          </p>
+          <a href="../contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">GET STARTED</a>
+        </div>
+
+        <!-- Strength & Conditioning -->
+        <div class="pricing-card reveal stagger-3">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">STRENGTH & CONDITIONING</h3>
+          <p class="eyebrow" style="margin-bottom: 1rem;">Monthly Membership</p>
+          <span class="pricing-amount">$250<span style="font-size: 1.125rem; font-weight: 500; color: rgba(0,0,0,0.6);">/mo</span></span>
+          <p class="subtext" style="font-size: 0.9rem; color: rgba(0,0,0,0.7); margin-top: 2rem;">
+            Includes in-person strength and conditioning programming.
+          </p>
+          <a href="../contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">GET STARTED</a>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="reveal mt-lg" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.12); border-radius: 8px; padding: 2rem;">
+        <h4 style="color: #0a0a0a; margin-bottom: 1rem; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">MEMBERSHIP TERMS</h4>
+        <p style="font-size: 0.9rem; line-height: 1.7; color: rgba(0,0,0,0.75);">
+          All memberships are auto-renewing unless written notice is received before the renewal date. 
+          No refunds or credits will be issued for unused months. Memberships cannot be paused. 
+          Early cancellation fees apply to 12-month commitments. All athletes must complete a <a href="../training.html#metric" style="color: var(--accent); text-decoration: underline;">Metric Testing Evaluation</a> before starting training.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: COACHES AT THIS LOCATION -->
+  <section id="coaches" class="section-light" style="padding: 3rem 0; scroll-margin-top: 72px;">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal" style="display: block; margin-bottom: 0.5rem;">MEET YOUR COACHES</span>
+        <h2 class="reveal" style="font-size: 2.5rem; font-weight: 700;">COACHING STAFF</h2>
+      </div>
+
+      <div class="grid coaches-desktop" style="max-width: 440px; margin: 0 auto; grid-template-columns: 1fr;">
+        <!-- Gehrig Diemoz -->
+        <div class="card reveal stagger-1">
+          <div style="overflow: hidden; aspect-ratio: 1/1; margin-bottom: 1rem;">
+            <img src="https://bsfperformance.com/images/gehrig.webp" alt="Gehrig Diemoz Director of Sports Performance at BSF Performance Columbus" class="coach-photo" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="400" loading="lazy">
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">GEHRIG DIEMOZ</h3>
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Sports Performance</p>
+          <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:GDiemoz@bjescolumbus.com" style="color: inherit; text-decoration: underline;">GDiemoz@bjescolumbus.com</a></p>
+        </div>
+      </div>
+
+      <!-- Mobile Carousel -->
+      <div class="swiper swiper-mobile coaches-mobile" style="max-width: 1200px; margin: 0 auto; padding-bottom: 3rem;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div style="overflow: hidden; aspect-ratio: 1/1; margin-bottom: 1rem;">
+                <img src="https://bsfperformance.com/images/gehrig.webp" alt="Gehrig Diemoz Director of Sports Performance at BSF Performance Columbus" class="coach-photo" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="400" loading="lazy">
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">GEHRIG DIEMOZ</h3>
+              <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Sports Performance</p>
+              <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:GDiemoz@bjescolumbus.com" style="color: inherit; text-decoration: underline;">GDiemoz@bjescolumbus.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section-light" style="padding: 2.5rem 0;">
+    <div class="container text-center">
+      <h2 class="reveal" style="margin-bottom: 1.5rem;">READY TO BEGIN?</h2>
+      <p class="subtext reveal" style="max-width: 600px; margin: 0 auto 2rem;">
+        Contact us about training at our Columbus location and start your journey to elite performance.
+      </p>
+      <a href="../contact.html" class="btn btn-primary reveal">CONTACT US</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="../index.html" class="footer-logo">
+              <img src="../images/bsflogo.webp" alt="BSF Performance logo">
+            </a>
+            <p class="footer-tagline">Bigger. Stronger. Faster.</p>
+            <p class="footer-sub">Train where development meets measurable performance.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../difference.html">The BSF Difference</a></li>
+            <li><a href="../training.html">Training Programs</a></li>
+            <li><a href="lockport.html">Lockport</a></li>
+            <li><a href="bensenville.html">Bensenville</a></li>
+            <li><a href="columbus.html">Columbus</a></li>
+            <li><a href="../remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../success.html">Athlete Success</a></li>
+            <li><a href="../about.html">About & Coaches</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../privacy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & App -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+          <div class="footer-app-badge" style="margin-top: 1.25rem;">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="../images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" style="max-width: 140px; width: 100%; height: auto; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Toggle facility image color on click
+    function toggleImageColor(img) {
+      img.classList.toggle('colored');
+    }
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>
+
+
+

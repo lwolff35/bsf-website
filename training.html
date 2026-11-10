@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="BSF Performance training programs: Pitching Performance, athlete-specific Strength & Conditioning, Fastpitch softball training, and Metric Testing Evaluation services.">
+  <title>Performance Training & Pitching Development</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bsfperformance.com/training">
+  <link rel="preload" as="image" href="images/hero01.webp">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="Explore BSF Performance training programs including pitching development, athlete-specific strength and conditioning, fastpitch, and metric testing evaluation.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://bsfperformance.com/training">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Performance Training & Pitching Development">
+  <meta name="twitter:description" content="Explore BSF Performance training programs including pitching development, athlete-specific strength and conditioning, fastpitch, and metric testing evaluation.">
+  <meta name="twitter:image" content="https://bsfperformance.com/images/newfavicon.png">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-centered {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 60px);
+      margin: 60px 0 0 0;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+    
+    .hero-image-side {
+      flex: 0 0 60%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%) contrast(1.08) brightness(0.95);
+      z-index: 1;
+    }
+    
+    .hero-content-side {
+      flex: 0 0 40%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background: #0a0a0a;
+      z-index: 2;
+    }
+    
+    .hero-content-side::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 0.42s ease-out 0.08s forwards;
+      transform: translateY(40px);
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.05em;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 968px) {
+      .hero-centered {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+      
+      .hero-image-side {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+      }
+      
+      .hero-content-side {
+        flex: none;
+        min-height: auto;
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hero-content-side::before {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+      
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .program-card {
+      background: var(--bg-secondary);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .program-card:hover {
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    
+    .program-card-image {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .program-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(1.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .program-card:hover .program-card-image img {
+      transform: scale(1.05);
+    }
+    
+    .program-card-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .program-card-content h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+    
+    .program-card-content p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    
+    .program-card-content .btn {
+      width: 100%;
+      min-height: 44px;
+    }
+
+    .training-programs-swiper {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 3.5rem 1rem;
+      overflow: visible;
+    }
+
+    .training-programs-swiper .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+
+    .training-programs-swiper .swiper-button-prev,
+    .training-programs-swiper .swiper-button-next {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-primary);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .training-programs-swiper .swiper-button-prev:hover,
+    .training-programs-swiper .swiper-button-next:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.22);
+    }
+
+    .training-programs-swiper .swiper-button-prev::after,
+    .training-programs-swiper .swiper-button-next::after {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .training-programs-swiper .swiper-pagination {
+      position: static;
+      margin-top: 1.25rem;
+    }
+
+    .training-programs-swiper .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: rgba(255,255,255,0.28);
+      opacity: 1;
+    }
+
+    .training-programs-swiper .swiper-pagination-bullet-active {
+      background: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      .training-programs-swiper {
+        padding: 0 0 1rem;
+      }
+
+      .training-programs-swiper .swiper-button-prev,
+      .training-programs-swiper .swiper-button-next {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/bsflogo.webp" alt="BSF Performance logo" class="logo-img" width="124" height="36">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            Locations
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="locations/lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="remote.html">Remote</a></li>
+        <li><a href="success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="difference.html">The BSF Difference</a>
+            <a href="about.html">Coaches</a>
+            <a href="training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="locations/lockport.html">Lockport, IL</a>
+          <a href="locations/bensenville.html">Bensenville, IL</a>
+          <a href="locations/columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+      
+      <a href="remote.html" class="mobile-nav-item">Remote</a>
+      <a href="success.html" class="mobile-nav-item">Athlete Success</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="difference.html">The BSF Difference</a>
+          <a href="about.html">Coaches</a>
+          <a href="training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-centered">
+    <div class="hero-image-side">
+      <img src="images/hero01.webp" alt="BSF Performance training programs for athletes including pitching, strength and conditioning, and fastpitch development" class="hero-background-image" width="1280" height="800" loading="eager" fetchpriority="high">
+    </div>
+    
+    <div class="hero-content-side">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          TRAIN WITH<br>
+          THE BEST
+        </h1>
+        <p class="hero-subtitle">
+          Elite training built for measurable results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING PROGRAMS SECTION -->
+  <section class="section-dark" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal">WHAT WE OFFER</span>
+        <h2 class="reveal">CHOOSE YOUR PATH</h2>
+        <p class="subtext reveal" style="max-width: 700px; margin: 1.5rem auto 0;">
+          Each program is built around data-driven methodologies and individualized athlete development. Train with purpose. Measure progress. Achieve results.
+        </p>
+      </div>
+
+      <div class="swiper training-programs-swiper reveal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article class="program-card stagger-1">
+              <div class="program-card-image">
+                <img src="images/bg.webp" alt="Baseball pitcher training at BSF Performance facility with Trackman data analysis" width="1136" height="912" loading="lazy">
+              </div>
+              <div class="program-card-content">
+                <h3>Pitching Performance</h3>
+                <p>
+                  Build velocity and command with data-driven pitching development tailored to your mechanics and goals.
+                </p>
+                <a href="pitching.html" class="btn btn-accent" aria-label="Learn more about pitching performance program">LEARN MORE →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="swiper-slide">
+            <article class="program-card stagger-2">
+              <div class="program-card-image">
+                <img src="images/sc.webp" alt="Athletes in small group strength and conditioning session at BSF Performance" width="1080" height="864" loading="lazy">
+              </div>
+              <div class="program-card-content">
+                <h3>Strength &amp; Conditioning</h3>
+                <p>
+                  Build strength, speed, and durability with athlete-specific programming guided by assessment data.
+                </p>
+                <a href="strength-conditioning.html" class="btn btn-accent" aria-label="Learn more about strength and conditioning program">LEARN MORE →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="swiper-slide">
+            <article class="program-card stagger-3">
+              <div class="program-card-image">
+                <img src="images/fastpitch.webp" alt="Fastpitch softball pitcher training at BSF Performance Bensenville Illinois" width="1179" height="1013" loading="lazy">
+              </div>
+              <div class="program-card-content">
+                <h3>Fastpitch</h3>
+                <p>
+                  Improve fastpitch velocity, mechanics, and explosiveness with softball-specific, data-backed coaching.
+                </p>
+                <a href="fastpitch.html" class="btn btn-accent" aria-label="Learn more about fastpitch softball program">LEARN MORE →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="swiper-slide">
+            <article class="program-card stagger-4">
+              <div class="program-card-image">
+                <img src="images/testing.webp" alt="BSF Performance metric testing evaluation setup with athlete performance measurement equipment" width="838" height="478" loading="lazy">
+              </div>
+              <div class="program-card-content">
+                <h3>Metric Testing Evaluation</h3>
+                <p>
+                  Get a full performance baseline with TrackMan, motion capture, force plate, and dynamometer testing.
+                </p>
+                <a href="contact.html" class="btn btn-accent" aria-label="Schedule a metric testing evaluation">GET EVALUATED →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev" aria-hidden="true"></div>
+        <div class="swiper-button-next" aria-hidden="true"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Remote Training CTA -->
+      <div class="card reveal" style="text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.12);">
+        <span class="eyebrow">TRAIN FROM ANYWHERE</span>
+        <h3 style="margin: 1rem 0; font-size: 1.75rem;">Can't Make It In Person?</h3>
+        <p class="subtext" style="max-width: 600px; margin: 0 auto 1.5rem; font-size: 1rem;">
+          Train remotely with personalized coaching, video analysis, and structured programming through the BSF App.
+        </p>
+        <a href="remote.html" class="btn btn-primary" aria-label="Explore remote training options">EXPLORE REMOTE TRAINING</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section-light" style="padding: 4rem 0;">
+    <div class="container text-center">
+      <h2 class="reveal" style="margin-bottom: 1rem;">READY TO GET STARTED?</h2>
+      <p class="subtext reveal" style="max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">
+        Contact us today to discuss which program is right for you and schedule your first session.
+      </p>
+      <a href="contact.html" class="btn btn-primary reveal" aria-label="Contact BSF Performance to start training">GET STARTED</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="images/bsflogo.webp" alt="BSF Performance logo" width="500" height="250" loading="lazy">
+            </a>
+            <p class="footer-tagline">Elite, data-driven athlete development.</p>
+            <p class="footer-sub">Train where development meets measurable performance.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="difference.html">The BSF Difference</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="locations/lockport.html">Lockport</a></li>
+            <li><a href="locations/bensenville.html">Bensenville</a></li>
+            <li><a href="locations/columbus.html">Columbus</a></li>
+            <li><a href="remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="success.html">Athlete Success</a></li>
+            <li><a href="about.html">About & Coaches</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & App -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+          <div class="footer-app-badge" style="margin-top: 1.25rem;">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" style="max-width: 140px; width: 100%; height: auto; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'" width="646" height="242" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.querySelector('.training-programs-swiper')) {
+        new Swiper('.training-programs-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 16,
+          loop: false,
+          speed: 650,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.training-programs-swiper .swiper-button-next',
+            prevEl: '.training-programs-swiper .swiper-button-prev'
+          },
+          pagination: {
+            el: '.training-programs-swiper .swiper-pagination',
+            clickable: true
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 1.2,
+              spaceBetween: 18
+            },
+            900: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            }
+          }
+        });
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

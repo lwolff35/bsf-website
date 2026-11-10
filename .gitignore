@@ -1,0 +1,9 @@
+.venv/
+deploy/
+node_modules/
+.wrangler/
+__pycache__/
+.vscode/
+*.pyc
+Thumbs.db
+desktop.ini

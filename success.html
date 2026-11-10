@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  
+  
+  <meta name="description" content="BSF Performance athletes have been selected in every round of the MLB Draft and committed to NCAA programs nationwide. See velocity gains, draft results, and college success stories.">
+  <title>Performance Training & Pitching Development</title>
+  <link rel="canonical" href="https://bsfperformance.com/success">
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="BSF Performance athletes have been selected in every round of the MLB Draft and committed to NCAA programs nationwide. See velocity gains, draft results, and college success stories.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <meta property="og:url" content="https://bsfperformance.com/success">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-centered {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 60px);
+      margin: 60px 0 0 0;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+    
+    .hero-image-side {
+      flex: 0 0 60%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      filter: grayscale(100%) contrast(1.08) brightness(0.95);
+      z-index: 1;
+    }
+    
+    .hero-content-side {
+      flex: 0 0 40%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background: #0a0a0a;
+      z-index: 2;
+    }
+    
+    .hero-content-side::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 0.42s ease-out 0.08s forwards;
+      transform: translateY(40px);
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 968px) {
+      .hero-centered {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+      
+      .hero-image-side {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+      }
+      
+      .hero-content-side {
+        flex: none;
+        min-height: auto;
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hero-content-side::before {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .jump-to-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: visible;
+      white-space: normal;
+      background: linear-gradient(180deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.84) 100%);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0.75rem 1rem;
+      margin: 0;
+      position: relative;
+      z-index: 20;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      backdrop-filter: blur(8px);
+    }
+
+    .jump-to-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.65rem 1.1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.78);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    #pro.section-dark,
+    #college.section-dark-alt,
+    #testimonials.section-dark {
+      padding: 5rem 0;
+    }
+
+    .athlete-carousel {
+      min-height: 620px;
+    }
+
+    .athlete-spotlight {
+      padding: 2.25rem;
+      gap: 2rem;
+    }
+
+    .testimonial-carousel {
+      min-height: 320px;
+    }
+
+    .jump-to-nav a:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.24);
+    }
+
+    .athlete-photo {
+      aspect-ratio: 3 / 4;
+    }
+
+    .athlete-photo img {
+      object-position: center 24%;
+    }
+
+    .athlete-spotlight {
+      grid-template-areas:
+        "title image"
+        "quote image"
+        "stats image";
+      align-items: start;
+    }
+
+    .athlete-spotlight.reverse {
+      grid-template-areas:
+        "image title"
+        "image quote"
+        "image stats";
+    }
+
+    .athlete-photo {
+      grid-area: image;
+      align-self: stretch;
+    }
+
+    .athlete-content {
+      display: contents;
+    }
+
+    .athlete-content > div:first-child {
+      grid-area: title;
+      align-self: end;
+      margin-bottom: 0.35rem;
+    }
+
+    .athlete-content .athlete-quote {
+      grid-area: quote;
+      margin: 0;
+    }
+
+    .athlete-content .athlete-stats {
+      grid-area: stats;
+      margin-top: 0.35rem;
+    }
+
+    .athlete-spotlight:hover .athlete-photo img {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 1024px) {
+      .athlete-spotlight,
+      .athlete-spotlight.reverse {
+        grid-template-areas:
+          "title"
+          "image"
+          "quote"
+          "stats";
+      }
+    }
+
+    @media (max-width: 768px) {
+      #pro {
+        padding-top: 2.25rem;
+        padding-bottom: 1.1rem;
+      }
+
+      #college {
+        padding-top: 0.65rem;
+        padding-bottom: 1.6rem;
+      }
+
+      #college .text-center {
+        margin-bottom: 0.65rem;
+      }
+
+      #testimonials {
+        padding-top: 1.6rem;
+        padding-bottom: 1rem;
+      }
+
+      .jump-to-nav {
+        justify-content: center;
+        gap: 0.4rem;
+        overflow-x: auto;
+        white-space: normal;
+        padding: 0.4rem 0.55rem;
+      }
+
+      .jump-to-nav a {
+        min-width: 36px;
+        min-height: 36px;
+        padding: 0.4rem 0.65rem;
+        font-family: var(--font-body);
+        font-size: 0.62rem;
+        letter-spacing: 0.04em;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        width: 100%;
+        min-height: 52px;
+      }
+
+      .athlete-carousel-container {
+        padding: 1rem 0.75rem 1.25rem;
+      }
+
+      .athlete-carousel-container .carousel-nav {
+        display: none;
+      }
+
+      .athlete-carousel {
+        min-height: 0;
+        display: block;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .athlete-spotlight,
+      .athlete-spotlight.reverse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        margin: 0 auto;
+        transform: translateX(18%) scale(0.97);
+        opacity: 0;
+        pointer-events: none;
+        grid-template-areas: none;
+        max-width: 100%;
+        width: 100%;
+        padding: 0.95rem;
+        border-radius: 14px;
+        gap: 0.75rem;
+        transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .athlete-spotlight[data-carousel-active="true"] {
+        position: relative;
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        pointer-events: auto;
+        z-index: 3;
+      }
+
+      .athlete-spotlight[data-carousel-active="prev"] {
+        opacity: 0.22;
+        transform: translateX(-18%) scale(0.96);
+        z-index: 2;
+      }
+
+      .athlete-spotlight[data-carousel-active="next"] {
+        opacity: 0.22;
+        transform: translateX(18%) scale(0.96);
+        z-index: 2;
+      }
+
+      .athlete-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.65rem;
+        width: 100%;
+      }
+
+      .athlete-content > div:first-child {
+        align-self: center;
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      .athlete-content > div:first-child * {
+        text-align: center !important;
+      }
+
+      .athlete-content .athlete-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 340px;
+        margin: 0.1rem auto 0;
+        gap: 0.55rem;
+      }
+
+      .athlete-photo {
+        width: min(100%, 260px);
+        aspect-ratio: 1 / 1;
+        align-self: center;
+      }
+
+      .athlete-name,
+      .athlete-position,
+      .athlete-team,
+      .athlete-quote {
+        text-align: center !important;
+      }
+
+      .athlete-team,
+      .athlete-position,
+      .athlete-name {
+        width: 100%;
+      }
+
+      .athlete-team {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+        margin: 0 auto 0.4rem !important;
+      }
+
+      .athlete-position {
+        margin: 0 auto 0.3rem !important;
+      }
+
+      .athlete-quote {
+        padding: 0.85rem;
+        margin: 0.15rem 0;
+      }
+
+      .stat-box {
+        padding: 0.75rem;
+      }
+
+      .testimonial-carousel-container {
+        padding: 0.25rem 0;
+      }
+
+      .testimonial-carousel {
+        min-height: 220px;
+      }
+
+      .testimonial-dots {
+        margin-top: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="images/bsflogo.webp" alt="BSF Performance" class="logo-img" height="36"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Locations <span>?</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="locations/lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="remote.html">Remote</a></li>
+        <li><a href="success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">About <span>?</span></span>
+          <div class="nav-dropdown-menu">
+            <a href="difference.html">The BSF Difference</a>
+            <a href="about.html">Coaches</a>
+            <a href="training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">&rsaquo;</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="locations/lockport.html">Lockport, IL</a>
+          <a href="locations/bensenville.html">Bensenville, IL</a>
+          <a href="locations/columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+      
+      <a href="remote.html" class="mobile-nav-item">Remote</a>
+      <a href="success.html" class="mobile-nav-item">Athlete Success</a>
+      
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">&rsaquo;</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="difference.html">The BSF Difference</a>
+          <a href="about.html">Coaches</a>
+          <a href="training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+    
+    <a href="contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-centered">
+    <div class="hero-image-side">
+      <img src="images/lport01.webp" alt="BSF Performance athlete training at Bo Jackson's Elite Sports facility" class="hero-background-image">
+    </div>
+    
+    <div class="hero-content-side">
+      <div class="hero-content">
+        <h1 class="hero-title">ATHLETES AT<br>THE NEXT LEVEL</h1>
+        <div class="hero-stats-inline">
+          <div class="stat-item-inline reveal stagger-1">
+            <div class="stat-number-inline" data-counter="200">200+</div>
+            <div class="stat-label-inline">College Commits</div>
+          </div>
+          <div class="stat-item-inline reveal stagger-2">
+            <div class="stat-number-inline" data-counter="15">15+</div>
+            <div class="stat-label-inline">Draft Picks & Signees</div>
+          </div>
+          <div class="stat-item-inline reveal stagger-3">
+            <div class="stat-number-inline" data-counter="1000">1000+</div>
+            <div class="stat-label-inline">Athletes Trained</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUMP TO NAV -->
+  <nav class="jump-to-nav">
+    <a href="#pro">PRO ATHLETES</a>
+    <a href="#college">COLLEGE ATHLETES</a>
+    <a href="#testimonials">TESTIMONIALS</a>
+  </nav>
+
+  <!-- PROFESSIONAL ATHLETES -->
+  <section id="pro" class="section-dark">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 1.25rem;">
+        <span class="eyebrow reveal">THE PRO LEVEL</span>
+        <h2 class="reveal">PROFESSIONAL ATHLETES</h2>
+        <p class="subtext reveal" style="max-width: 650px; margin: 0.75rem auto 0;">
+          BSF athletes have been drafted and signed to MLB organizations, playing in Major League Baseball, Minor League systems, and independent leagues.
+        </p>
+      </div>
+
+      <!-- Athlete Spotlights Carousel -->
+      <div class="athlete-carousel-container">
+        <button class="carousel-nav carousel-prev" aria-label="Previous athlete">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="carousel-nav carousel-next" aria-label="Next athlete">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+        <div class="athlete-carousel">
+          <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/promassey2.webp" alt="Michael Massey, 2B & LF, Kansas City Royals, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">MICHAEL MASSEY</h3>
+            <p class="athlete-position">2B & LF</p>
+            <p class="athlete-team">Kansas City Royals</p>
+          </div>
+          <p class="athlete-quote">
+            Michael's strength and conditioning development at BSF built the durability and explosiveness needed to compete daily at the MLB level with the Kansas City Royals.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">MLB</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2B/LF</div>
+              <div class="stat-box-label">Position</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/sloan2.webp" alt="Ryan Sloan, RHP, Seattle Mariners Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">RYAN SLOAN</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Seattle Mariners Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Ryan's data-driven development at BSF led to him being selected 55th overall (2nd round) in the 2024 MLB Draft by the Seattle Mariners.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">2nd</div>
+              <div class="stat-box-label">Round</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">55th</div>
+              <div class="stat-box-label">Overall 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/essenburg.webp" alt="Conor Essenburg, OF, Atlanta Braves Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">CONOR ESSENBURG</h3>
+            <p class="athlete-position">OF</p>
+            <p class="athlete-team">Atlanta Braves Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Conor maximized his potential through advanced performance training, earning selection at 157th overall (5th round) in the 2025 MLB Draft.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">5th</div>
+              <div class="stat-box-label">Round</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">157th</div>
+              <div class="stat-box-label">Overall 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/oliver.webp" alt="Connor Oliver, LHP, Pittsburgh Pirates Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">CONNOR OLIVER</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Pittsburgh Pirates Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Connor developed his complete arsenal and elite command at BSF, establishing himself as a reliable arm in the Pittsburgh Pirates organization.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">96</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2700+</div>
+              <div class="stat-box-label">RPM CB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/po.webp" alt="Peyton Olejnik, RHP, Los Angeles Angels Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">PEYTON OLEJNIK</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Los Angeles Angels Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Peyton's individualized development plan at BSF prepared him for professional baseball, leading to his 6th round selection (172nd overall) by the Los Angeles Angels in 2024.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">6th</div>
+              <div class="stat-box-label">Round</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">172nd</div>
+              <div class="stat-box-label">Overall 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/pronoah.webp" alt="Noah Schultz, LHP, Chicago White Sox Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">NOAH SCHULTZ</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Chicago White Sox Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Noah's strength and conditioning development at BSF built elite velocity and durability, propelling him to 1st round selection (26th overall) by the Chicago White Sox in 2022.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">1st</div>
+              <div class="stat-box-label">Round</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">26th</div>
+              <div class="stat-box-label">Overall 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/projpayton.webp" alt="Jack Payton, C, San Francisco Giants Organization, BSF Performance athlete" style="object-position: 45% center;">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK PAYTON</h3>
+            <p class="athlete-position">C</p>
+            <p class="athlete-team">San Francisco Giants Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's comprehensive strength and conditioning program at BSF improved his arm strength, mobility, and overall athleticism behind the plate for the San Francisco Giants organization.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">C</div>
+              <div class="stat-box-label">Position</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">1.9-2.0</div>
+              <div class="stat-box-label">Pop Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/proritter.webp" alt="Ryan Ritter, MIF, Colorado Rockies, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">RYAN RITTER</h3>
+            <p class="athlete-position">MIF</p>
+            <p class="athlete-team">Colorado Rockies</p>
+          </div>
+          <p class="athlete-quote">
+            Ryan's explosive strength development and conditioning at BSF built the athletic foundation that helped him reach the MLB level with the Colorado Rockies.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">MLB</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">MIF</div>
+              <div class="stat-box-label">Position</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/prowheeler.webp" alt="Jack Wheeler, MIF, Texas Rangers Organization, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK WHEELER</h3>
+            <p class="athlete-position">MIF</p>
+            <p class="athlete-team">Texas Rangers Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's development at BSF focused on advanced strength and conditioning work to build the athleticism and durability required, earning him 6th round selection (175th overall) by the Texas Rangers in 2025.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">6th</div>
+              <div class="stat-box-label">Round</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">175th</div>
+              <div class="stat-box-label">Overall 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/Stout.webp" alt="Eric Stout, LHP, Chicago Cubs, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">ERIC STOUT</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Chicago Cubs</p>
+          </div>
+          <p class="athlete-quote">
+            Eric joined BSF seeking guidance on routines and velocity development as a hybrid athlete already competing at the MLB level. Utilizing both in-person training and remote programming, he maximized his development to sustain his professional baseball career.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">44</div>
+              <div class="stat-box-label">MLB Games</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">92-95</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/protj.webp" alt="T.J. McFarland, LHP, Athletics, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">T.J. MCFARLAND</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Athletics</p>
+          </div>
+          <p class="athlete-quote">
+            T.J. extended his MLB career through refined pitching strategies and biomechanical adjustments at BSF, continuing to compete at the highest level with over a decade of professional experience.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">MLB</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">10+</div>
+              <div class="stat-box-label">Seasons</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/procrowder.webp" alt="Jack Crowder, RHP, Baltimore Orioles Organization, BSF Performance athlete" style="object-position: 45% center;">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK CROWDER</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Baltimore Orioles Organization</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's personalized training plan maximized his power arsenal, developing a 95-98 mph fastball with a high-spin slider that makes him a key arm in the Baltimore Orioles organization.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">95-98</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2900+</div>
+              <div class="stat-box-label">RPM SL</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/probranny.webp" alt="Jack Brannigan, MIF & 3B, Pittsburgh Pirates, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK BRANNIGAN</h3>
+            <p class="athlete-position">MIF & 3B</p>
+            <p class="athlete-team">Pittsburgh Pirates</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's strength and conditioning work at BSF built the power and explosiveness needed for MLB, earning a spot on the Pittsburgh Pirates 40-man roster.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">MLB</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">40-Man</div>
+              <div class="stat-box-label">Roster</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/mpayton.webp" alt="Mark Payton, OF, Cincinnati Reds & Chicago White Sox, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">MARK PAYTON</h3>
+            <p class="athlete-position">OF</p>
+            <p class="athlete-team">Cincinnati Reds & Chicago White Sox</p>
+          </div>
+          <p class="athlete-quote">
+            Mark made his MLB debut in August 2020 after developing elite speed, explosiveness, and conditioning at BSF, competing at the highest level with both the Cincinnati Reds and Chicago White Sox.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">MLB</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">OF</div>
+              <div class="stat-box-label">Position</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLEGIATE ATHLETES -->
+  <section id="college" class="section-dark-alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 1.25rem;">
+        <span class="eyebrow reveal">THE COLLEGE LEVEL</span>
+        <h2 class="reveal">COLLEGIATE ATHLETES</h2>
+        <p class="subtext reveal" style="max-width: 650px; margin: 0.75rem auto 0;">
+          Hundreds of BSF athletes have earned scholarships and roster spots at NCAA, JUCO, and NAIA programs across the country.
+        </p>
+      </div>
+
+      <!-- Athlete Spotlights Carousel -->
+      <div class="athlete-carousel-container">
+        <button class="carousel-nav carousel-prev" aria-label="Previous athlete">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="carousel-nav carousel-next" aria-label="Next athlete">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+        <div class="athlete-carousel">
+          <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/File.webp" alt="Jack Bauer, LHP, Mississippi State University, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK BAUER</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Mississippi State University</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's velocity development at BSF transformed him into an elite arm, touching 103 mph and earning his spot as a key pitcher at Mississippi State University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">103</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2850</div>
+              <div class="stat-box-label">RPM Slider</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/hayse.webp" alt="Aidan Hayse, RHP, Mercer University, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">AIDAN HAYSE</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Mercer University</p>
+          </div>
+          <p class="athlete-quote">
+            Aidan partnered with the BSF staff to build a professional routine around throwing, lifting, recovery, and in-season adjustments. That structure helped him stay healthy, stay consistent, and keep performing at a high level at Mercer.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">99</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">D1</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/rife.webp" alt="Jake Rifenburg, LHP, Northwestern University, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JAKE RIFENBURG</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Northwestern University</p>
+          </div>
+          <p class="athlete-quote">
+            Jake developed a complete pitching arsenal at BSF with advanced command and pitch mix, earning him a scholarship to compete in the Big Ten at Northwestern University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">91-93</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">Big Ten</div>
+              <div class="stat-box-label">Conference</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/linc.webp" alt="Lincoln Causero, RHP, Xavier University, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">LINCOLN CAUSERO</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Xavier University</p>
+          </div>
+          <p class="athlete-quote">
+            Lincoln's mechanical transformation and mental approach development at BSF gave him the confidence to compete at the Division I level with Xavier University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">98</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2700</div>
+              <div class="stat-box-label">RPM Slider</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/nagle.webp" alt="Dylan Nagle, RHP, Charlotte Commit, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">DYLAN NAGLE</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Charlotte Commit</p>
+          </div>
+          <p class="athlete-quote">
+            Dylan's foundation built at BSF through detailed programming and individualized attention earned him a commitment to Charlotte, positioning him for future success.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">95</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">D1</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/cd.webp" alt="Colin DiRocco, LHP, South Carolina Commit, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">COLIN DIROCCO</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">South Carolina Commit</p>
+          </div>
+          <p class="athlete-quote">
+            Colin's remote training success with BSF proved elite development transcends geography, as he earned his commitment to the University of South Carolina while training from distance.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">91-94</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2750</div>
+              <div class="stat-box-label">RPM Slider</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/rocco.webp" alt="Rocco Szambelan, LHP, Butler University Commit, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">ROCCO SZAMBELAN</h3>
+            <p class="athlete-position">LHP</p>
+            <p class="athlete-team">Butler University Commit</p>
+          </div>
+          <p class="athlete-quote">
+            Rocco's systematic velocity development at BSF over two years transformed him from 79-82 mph to up to 92 mph, earning his commitment to Butler University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">86-90</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">92 MPH FB</div>
+              <div class="stat-box-label">Peak Velo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/tjm.webp" alt="TJ McQuillan, 3B, Wake Forest Commit, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">TJ McQuillan</h3>
+            <p class="athlete-position">3B</p>
+            <p class="athlete-team">Wake Forest Commit</p>
+          </div>
+          <p class="athlete-quote">
+            TJ's strength and conditioning program at BSF developed the explosiveness and power output needed to earn his commitment to compete in the ACC at Wake Forest University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">ACC</div>
+              <div class="stat-box-label">Conference</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">114</div>
+              <div class="stat-box-label">Exit Velo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/slight.webp" alt="Jack Slightom, RHP, Cincinnati Commit, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">JACK SLIGHTOM</h3>
+            <p class="athlete-position">RHP</p>
+            <p class="athlete-team">Cincinnati Commit</p>
+          </div>
+          <p class="athlete-quote">
+            Jack's velocity development at BSF was transformational, consistently touching 97 mph and opening doors to play Division I baseball at the University of Cincinnati.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">97</div>
+              <div class="stat-box-label">MPH FB</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">2800</div>
+              <div class="stat-box-label">RPM Slider</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="athlete-spotlight" data-carousel-item>
+        <div class="athlete-photo">
+          <img src="images/bobby.webp" alt="Bobby Atkinson, 1B/OF, Missouri State University, BSF Performance athlete">
+        </div>
+        <div class="athlete-content">
+          <div>
+            <h3 class="athlete-name">BOBBY ATKINSON</h3>
+            <p class="athlete-position">1B/OF</p>
+            <p class="athlete-team">Missouri State University</p>
+          </div>
+          <p class="athlete-quote">
+            Bobby's comprehensive strength and conditioning development at BSF added significant explosiveness and athleticism to his game, earning him a roster spot at Missouri State University.
+          </p>
+          <div class="athlete-stats">
+            <div class="stat-box">
+              <div class="stat-box-value">D1</div>
+              <div class="stat-box-label">Level</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box-value">100+</div>
+              <div class="stat-box-label">Exit Velo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section-dark">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 1.25rem;">
+        <h2 class="reveal">TESTIMONIALS</h2>
+      </div>
+
+      <div class="testimonial-carousel-container">
+        <div class="testimonial-carousel">
+          <div class="testimonial-card" data-testimonial-item>
+            <div class="card card-gold-accent">
+              <p class="subtext" style="font-size: 1rem; font-style: italic; margin-bottom: 1.5rem;">
+                Gino came to BSF throwing 78-82 mph and stayed committed to the long-term development plan. Three years of consistent training and coaching transformed him into a 93 mph pitcher, earning him a spot at McLennan Community College.
+              </p>
+              <p style="color: var(--accent); font-weight: 500;">- GINO ZAGORAC, RHP, McLennan CC</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-testimonial-item>
+            <div class="card card-gold-accent">
+              <p class="subtext" style="font-size: 1rem; font-style: italic; margin-bottom: 1.5rem;">
+                Elias built his foundation training in-house at BSF before transitioning to college. Now as a remote athlete at St. Johns River State, he continues his development through BSF's remote programming, proving the lasting relationship and support extends beyond the facility walls.
+              </p>
+              <p style="color: var(--accent); font-weight: 500;">- ELIAS ALVARADO, St. Johns River State</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-testimonial-item>
+            <div class="card card-gold-accent">
+              <p class="subtext" style="font-size: 1rem; font-style: italic; margin-bottom: 1.5rem;">
+                After over a year of grinding at BSF, Keegan's progress speaks for itself. He went from uncommitted and throwing 83-85 mph to earning a UIC commit while sitting 87-90 and touching 91 mph, with massive improvements in off-speed metrics and strength.
+              </p>
+              <p style="color: var(--accent); font-weight: 500;">- KEEGAN LUXEM, RHP, UIC Baseball</p>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-testimonial-item>
+            <div class="card card-gold-accent">
+              <p class="subtext" style="font-size: 1rem; font-style: italic; margin-bottom: 1.5rem;">
+                John dedicated three years to development at BSF, going from 76-78 mph to 92 mph. Beyond velocity gains, he refined a high-level, full arsenal that made him a complete pitcher ready for the college level.
+              </p>
+              <p style="color: var(--accent); font-weight: 500;">- JOHN SKORDAS, RHP, South Suburban CC Commit</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-dark-alt" style="padding: 4rem 0;">
+    <div class="container text-center">
+      <h2 class="reveal" style="margin-bottom: 1.5rem;">READY TO WRITE YOUR SUCCESS STORY?</h2>
+      <p class="subtext reveal" style="max-width: 600px; margin: 0 auto 2rem;">
+        Join the athletes who trained at BSF and made it to the next level. Your journey starts with a Metric Testing Evaluation.
+      </p>
+      <a href="contact.html" class="btn btn-primary reveal" style="display: inline-block;">GET STARTED</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="images/bsflogo.webp" alt="BSF Performance logo">
+            </a>
+            <p class="footer-tagline">Bigger. Stronger. Faster.</p>
+            <p class="footer-sub">Train where development meets measurable performance.</p>
+            
+            <!-- Social Media Links -->
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="difference.html">The BSF Difference</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="locations/lockport.html">Lockport</a></li>
+            <li><a href="locations/bensenville.html">Bensenville</a></li>
+            <li><a href="locations/columbus.html">Columbus</a></li>
+            <li><a href="remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="success.html">Athlete Success</a></li>
+            <li><a href="about.html">About & Coaches</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & App -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+          <div class="footer-app-badge" style="margin-top: 1.25rem;">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" style="max-width: 140px; width: 100%; height: auto; cursor: pointer; transition: transform 0.3s ease, opacity 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'; this.style.opacity='0.9'" onmouseout="this.style.transform='scale(1)'; this.style.opacity='1'">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

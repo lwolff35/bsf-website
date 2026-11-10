@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=8">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=8">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=8">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=8">
+  <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png?v=8">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=8">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=8">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=8">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png?v=8">
+  <link rel="manifest" href="/site.webmanifest?v=8">  
+  <title>Performance Training & Pitching Development</title>
+  <meta name="description" content="BSF Performance builds individualized training programs using Trackman, VALD ForceDecks, Proteus Motion, and Speed Gates — the same technology trusted by MLB organizations.">
+  <link rel="canonical" href="https://bsfperformance.com/difference">
+  <meta property="og:title" content="Performance Training & Pitching Development">
+  <meta property="og:description" content="BSF Performance builds individualized training programs using Trackman, VALD ForceDecks, Proteus Motion, and Speed Gates — the same technology trusted by MLB organizations.">
+  <meta property="og:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <meta property="og:url" content="https://bsfperformance.com/difference">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Performance Training & Pitching Development">
+  <meta name="twitter:description" content="BSF Performance builds individualized training programs using Trackman, VALD ForceDecks, Proteus Motion, and Speed Gates — the same technology trusted by MLB organizations.">
+  <meta name="twitter:image" content="https://bsfperformance.com/images/newfavicon.png">
+  <link rel="preload" as="image" href="images/header2.webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BSF Performance",
+    "url": "https://bsfperformance.com/",
+    "logo": "https://bsfperformance.com/images/newfavicon.png",
+    "description": "BSF Performance delivers elite, data-driven athlete development through technology-backed testing, individualized programming, and phase-based periodization.",
+    "telephone": "+1-815-370-2773",
+    "email": "info@bsfperformance.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "17130 S. Prime Blvd, Bo Jackson's Elite Sports",
+      "addressLocality": "Lockport",
+      "addressRegion": "IL",
+      "postalCode": "60441",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.instagram.com/bsfperformance/",
+      "https://x.com/BSFpitching",
+      "https://www.youtube.com/@bsf_pitching"
+    ]
+  }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero-centered {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 60px);
+      margin: 60px 0 0 0;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+
+    .hero-image-side {
+      flex: 0 0 60%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(100%) contrast(1.08) brightness(0.95);
+      z-index: 1;
+    }
+
+    .hero-content-side {
+      flex: 0 0 40%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 3rem;
+      background: #0a0a0a;
+      z-index: 2;
+    }
+
+    .hero-content-side::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: left;
+      max-width: 500px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 0.42s ease-out 0.08s forwards;
+      transform: translateY(40px);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    .intro-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .mission-cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .contrast-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contrast-card {
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      padding: 1.25rem;
+    }
+
+    .contrast-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .compare-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.35rem;
+      display: inline-block;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .approach-carousel-shell,
+    .tech-carousel-shell {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .approach-swiper,
+    .tech-swiper {
+      width: 100%;
+      padding: 0 56px 16px;
+      overflow: visible;
+    }
+
+    .approach-swiper .swiper-button-prev,
+    .approach-swiper .swiper-button-next,
+    .tech-swiper .swiper-button-prev,
+    .tech-swiper .swiper-button-next {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.06);
+      color: var(--text-primary);
+      backdrop-filter: blur(8px);
+    }
+
+    .approach-swiper .swiper-button-prev::after,
+    .approach-swiper .swiper-button-next::after,
+    .tech-swiper .swiper-button-prev::after,
+    .tech-swiper .swiper-button-next::after {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .approach-swiper .swiper-pagination,
+    .tech-swiper .swiper-pagination {
+      position: static;
+      margin-top: 12px;
+    }
+
+    .approach-swiper .swiper-wrapper,
+    .tech-swiper .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .approach-swiper .swiper-slide,
+    .tech-swiper .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+
+    .step-card {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.1rem 1.15rem;
+      background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
+      box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+      height: 100%;
+      width: 100%;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(218,165,32,0.14);
+      border: 1px solid rgba(218,165,32,0.45);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card h3 {
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      margin-bottom: 0.55rem;
+      letter-spacing: 0.02em;
+    }
+
+    .step-card .subtext {
+      font-size: 0.95rem;
+      line-height: 1.45;
+      max-width: 44ch;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .stat-card {
+      text-align: center;
+      border: 1px solid rgba(218,165,32,0.25);
+      border-radius: 14px;
+      padding: 1.5rem 1rem;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .stat-number {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .tech-card {
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      padding: 1rem;
+      height: 100%;
+      width: 100%;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tech-logo-wrap {
+      width: 100%;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.07);
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+      padding: 0.9rem 1.2rem;
+      overflow: hidden;
+    }
+
+    .tech-logo {
+      max-height: 90px;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .tech-head {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .tech-icon {
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      color: var(--accent);
+      background: transparent;
+      font-size: 0.95rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .tech-card h3 {
+      font-size: clamp(1rem, 1.7vw, 1.25rem);
+      margin: 0;
+    }
+
+    .tech-card .subtext {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .app-carousel-wrap {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .app-clean {
+      align-items: start !important;
+      gap: 1.5rem !important;
+    }
+
+    .app-clean .service-list {
+      margin-bottom: 1.2rem !important;
+      display: grid;
+      gap: 0.55rem;
+      max-width: 520px;
+    }
+
+    .app-clean .service-list li {
+      font-size: 0.95rem;
+      line-height: 1.35;
+      padding-left: 1.45rem;
+      text-align: left;
+    }
+
+    .app-clean .service-list li::before {
+      top: 0.35rem;
+      width: 6px;
+      height: 6px;
+    }
+
+    .app-clean h2 {
+      margin-bottom: 0.75rem !important;
+    }
+
+    .app-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .bo-dome-content {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 980px;
+    }
+
+    .bo-dome-content .subtext {
+      text-align: center;
+    }
+
+    .app-shot {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      aspect-ratio: 9 / 16;
+    }
+
+    .app-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--accent);
+      opacity: 0.4;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    .bo-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    a,
+    button,
+    .btn,
+    .mobile-nav-item,
+    .mobile-nav-cta {
+      min-height: 44px;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 968px) {
+      .hero-centered {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .hero-image-side {
+        flex: none;
+        height: 40vh;
+        min-height: 300px;
+      }
+
+      .hero-content-side {
+        flex: none;
+        min-height: auto;
+        padding: 3rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-content-side::before {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .contrast-grid,
+      .stats-row,
+      .tech-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid,
+      .contrast-grid,
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-swiper,
+      .tech-swiper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .approach-swiper .swiper-button-prev,
+      .approach-swiper .swiper-button-next,
+      .tech-swiper .swiper-button-prev,
+      .tech-swiper .swiper-button-next {
+        width: 40px;
+        height: 40px;
+      }
+
+      .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+
+      h2 {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+      }
+
+      .step-card {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid rgba(255,255,255,0.14);
+        background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+      }
+
+      .tech-card h3,
+      .tech-card .subtext {
+        text-align: left;
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stat-number {
+        font-size: 2.25rem;
+      }
+
+      .bo-buttons {
+        flex-direction: row;
+        gap: 0.65rem;
+        justify-content: center;
+      }
+
+      .bo-buttons .btn {
+        width: auto;
+        max-width: none;
+        min-height: 48px;
+        font-size: 0.82rem;
+        padding: 0.8rem 1rem !important;
+      }
+
+      .app-clean .service-list {
+        max-width: 360px;
+        margin: 0 auto 1.1rem !important;
+        gap: 0.45rem;
+      }
+
+      .app-clean .service-list li {
+        font-size: 0.9rem;
+        line-height: 1.28;
+        min-height: 2.5em;
+      }
+
+      .app-badge-row {
+        justify-content: center;
+        width: 100%;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-centered {
+        min-height: auto;
+      }
+
+      .hero-image-side {
+        height: 45vh;
+      }
+
+      .hero-content-side {
+        min-height: 55vh;
+        padding: 2rem 1.5rem;
+      }
+
+      .hero-title {
+        font-size: clamp(2.25rem, 10vw, 3.5rem);
+      }
+
+      .app-carousel-wrap {
+        max-width: 210px;
+      }
+
+      .bo-buttons .btn {
+        font-size: 0.76rem;
+        padding: 0.72rem 0.82rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/bsflogo.webp" alt="BSF Performance" class="logo-img" width="180" height="36">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            Locations
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="locations/lockport.html" class="dropdown-item-two-line">
+              <span class="item-main">Lockport, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/bensenville.html" class="dropdown-item-two-line">
+              <span class="item-main">Bensenville, IL</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+            <a href="locations/columbus.html" class="dropdown-item-two-line">
+              <span class="item-main">Columbus, OH</span>
+              <span class="item-sub">Bo Jackson's Elite Sports</span>
+            </a>
+          </div>
+        </li>
+        <li><a href="remote.html">Remote</a></li>
+        <li><a href="success.html">Athlete Success</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">
+            About
+            <span>▼</span>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="difference.html">The BSF Difference</a>
+            <a href="about.html">Coaches</a>
+            <a href="training.html">Training</a>
+          </div>
+        </li>
+        <li class="nav-cta"><a href="contact.html" class="btn btn-accent">GET STARTED</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION -->
+  <div class="mobile-nav">
+    <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-item">Home</a>
+
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          Locations <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="locations/lockport.html">Lockport, IL</a>
+          <a href="locations/bensenville.html">Bensenville, IL</a>
+          <a href="locations/columbus.html">Columbus, OH</a>
+        </div>
+      </div>
+
+      <a href="remote.html" class="mobile-nav-item">Remote</a>
+      <a href="success.html" class="mobile-nav-item">Athlete Success</a>
+
+      <div class="mobile-nav-dropdown">
+        <button class="mobile-nav-item mobile-dropdown-toggle">
+          About <span class="dropdown-arrow">›</span>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="difference.html">The BSF Difference</a>
+          <a href="about.html">Coaches</a>
+          <a href="training.html">Training</a>
+        </div>
+      </div>
+    </nav>
+
+    <a href="contact.html" class="mobile-nav-cta btn btn-accent">GET STARTED</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-centered">
+    <div class="hero-image-side">
+      <img src="images/header2.webp" alt="Athletes training at BSF Performance using data-driven technology." class="hero-background-image" width="1920" height="1080">
+    </div>
+
+    <div class="hero-content-side">
+      <div class="hero-content">
+        <h1 class="hero-title">THE BSF<br>DIFFERENCE</h1>
+        <p class="hero-subtitle">Personalized training backed by data, not templates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section-dark">
+    <div class="container intro-wrap">
+      <div class="reveal" style="border-left: 4px solid var(--accent); padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <span class="eyebrow" style="margin-bottom: 0.55rem;">OUR MISSION</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); color: var(--accent); margin-bottom: 0; line-height: 1.2;">
+          EVERY ATHLETE IS DIFFERENT. YOUR PROGRAM SHOULD BE TOO.
+        </h2>
+      </div>
+      <div class="reveal">
+        <p class="subtext" style="margin-bottom: 1rem;">
+          Every athlete begins with a data-first Metric Testing Evaluation so we can identify limitations before training starts. From that baseline, we build individualized programming and deliver it through in-person and remote options, keeping development aligned to your goals year-round.
+        </p>
+        <div class="mission-cta-row">
+          <a href="contact.html" class="btn btn-primary">GET STARTED</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRAST -->
+  <section class="section-dark-alt">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal">THE BSF DIFFERENCE</span>
+        <h2 class="reveal">WHY ATHLETES CHOOSE BSF</h2>
+      </div>
+      <div class="contrast-grid">
+        <article class="contrast-card reveal">
+          <h3>One Connected System</h3>
+          <p class="subtext">Skill work, strength, speed, and testing are built into one plan instead of separate programs.</p>
+        </article>
+
+        <article class="contrast-card reveal">
+          <h3>Individualized Programming</h3>
+          <p class="subtext">Your workload and progressions are based on your data, position, training age, and season timeline.</p>
+        </article>
+
+        <article class="contrast-card reveal">
+          <h3>Objective Re-Testing</h3>
+          <p class="subtext">We re-test key metrics through the year so adjustments are based on results, not guesswork.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal">OUR APPROACH</span>
+        <h2 class="reveal">HOW WE DEVELOP ATHLETES</h2>
+      </div>
+
+      <div class="approach-carousel-shell">
+        <div class="swiper approach-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="step-card reveal">
+                <span class="step-number">01</span>
+                <h3>PROFESSIONAL EVALUATION</h3>
+                <p class="subtext">Baseline testing across strength, speed, power, and movement identifies exactly what is limiting your performance.</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="step-card reveal">
+                <span class="step-number">02</span>
+                <h3>INDIVIDUALIZED PROGRAM</h3>
+                <p class="subtext">Custom programming is built from your data, goals, injury history, and position, never from one-size-fits-all templates.</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="step-card reveal">
+                <span class="step-number">03</span>
+                <h3>DATA-DRIVEN TRAINING</h3>
+                <p class="subtext">Training uses VALD ForceDecks, Trackman, Proteus Motion, and Speed Gates, the same tools trusted by MLB organizations.</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="step-card reveal">
+                <span class="step-number">04</span>
+                <h3>CONTINUOUS EVOLUTION</h3>
+                <p class="subtext">Regular re-testing drives program adjustments based on how you respond, recover, and develop through each phase.</p>
+              </article>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="section-dark-alt">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <span class="eyebrow reveal">OUR TECHNOLOGY</span>
+        <h2 class="reveal">PRO-LEVEL TOOLS, APPLIED TO EVERY ATHLETE</h2>
+      </div>
+
+      <div class="tech-carousel-shell">
+        <div class="swiper tech-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="tech-card reveal">
+                <div class="tech-logo-wrap">
+                  <img src="images/trackman.webp" alt="Trackman" class="tech-logo">
+                </div>
+                <div class="tech-head">
+                  <h3>Trackman Baseball</h3>
+                </div>
+                <p class="subtext">Precise throwing metrics guide cleaner coaching decisions.</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="tech-card reveal">
+                <div class="tech-logo-wrap">
+                  <img src="images/Vald.webp" alt="VALD Performance" class="tech-logo">
+                </div>
+                <div class="tech-head">
+                  <h3>VALD ForceDecks &amp; Speed Gates</h3>
+                </div>
+                <p class="subtext">Force, asymmetry, and timing data combined to track power and acceleration gains.</p>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="tech-card reveal">
+                <div class="tech-logo-wrap">
+                  <img src="images/proteus.webp" alt="Proteus Motion" class="tech-logo">
+                </div>
+                <div class="tech-head">
+                  <h3>Proteus Motion</h3>
+                </div>
+                <p class="subtext">Rotational output data sharpens sport-specific power targets.</p>
+              </article>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section class="section-dark">
+    <div class="container">
+      <div class="grid grid-2 app-clean" style="gap: 2rem; align-items: center;">
+        <div class="reveal">
+          <span class="eyebrow">POWERED BY THE BSF APP</span>
+          <h2 style="margin-bottom: 1.2rem;">CONNECTED TRAINING, EVERY DAY</h2>
+          <p class="subtext" style="margin-bottom: 1rem;">Your entire program lives in your pocket — so development doesn't stop when you leave the facility.</p>
+          <ul class="service-list" style="margin-bottom: 2rem;">
+            <li>Daily schedules and personalized training plans</li>
+            <li>Performance dashboards with testing trends over time</li>
+            <li>Exercise video demos with coaching cues</li>
+            <li>Workload monitoring and training history</li>
+            <li>Direct messaging with your performance coach</li>
+          </ul>
+          <div class="app-badge-row">
+            <a href="https://apps.apple.com/in/app/b-s-f-performance/id6502332840" target="_blank" rel="noopener noreferrer">
+              <img src="images/badge.webp" alt="Download BSF Performance training app on the App Store for iOS" width="540" height="160" style="max-width: 180px; width: 100%; height: auto;">
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="app-carousel-wrap">
+            <div class="swiper app-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide app-shot">
+                  <img src="images/01bsf.webp" alt="BSF Performance App daily training schedule view" loading="lazy" width="720" height="1280">
+                </div>
+                <div class="swiper-slide app-shot">
+                  <img src="images/02bsf.webp" alt="BSF Performance App athlete performance dashboard" loading="lazy" width="720" height="1280">
+                </div>
+                <div class="swiper-slide app-shot">
+                  <img src="images/03bsf.webp" alt="BSF Performance App exercise demonstration with coaching cues" loading="lazy" width="720" height="1280">
+                </div>
+                <div class="swiper-slide app-shot">
+                  <img src="images/04bsf.webp" alt="BSF Performance App coach messaging and progress tracking" loading="lazy" width="720" height="1280">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BO DOME -->
+  <section class="hero grain-overlay" style="min-height: 60vh; position: relative;">
+    <img src="images/bville.webp" alt="Bo Jackson's Elite Sports indoor training facility with turf fields and batting cages" loading="lazy" width="1920" height="1080"
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%);">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(10,10,10,0.6), rgba(10,10,10,0.85));"></div>
+
+    <div class="hero-content bo-dome-content" style="position: relative; z-index: 1;">
+      <h2 style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: 1rem;">THE BO DOME</h2>
+      <p class="subtext" style="max-width: 760px; margin: 0 auto 2rem;">
+        Our Lockport, Bensenville, and Columbus training operates inside Bo Jackson's Elite Sports facilities with indoor turf, cages, and dedicated strength space designed for year-round athlete development.
+      </p>
+      <div class="bo-buttons">
+        <a href="locations/lockport.html" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; padding: 1rem 2rem; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; transition: all 0.3s ease; border-radius: 4px;">LOCKPORT LOCATION</a>
+        <a href="locations/bensenville.html" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; padding: 1rem 2rem; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; transition: all 0.3s ease; border-radius: 4px;">BENSENVILLE LOCATION</a>
+        <a href="locations/columbus.html" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; padding: 1rem 2rem; text-decoration: none; font-weight: 600; letter-spacing: 0.1em; transition: all 0.3s ease; border-radius: 4px;">COLUMBUS LOCATION</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section-dark-alt">
+    <div class="container text-center">
+      <h2 class="reveal">READY TO SEE THE DIFFERENCE?</h2>
+      <p class="subtext reveal" style="max-width: 720px; margin: 0 auto 2rem;">
+        Get a training plan built specifically for you.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-accent">START YOUR TRAINING</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <img src="images/bsflogo.webp" alt="BSF Performance logo" width="180" height="36">
+            </a>
+            <p class="footer-tagline">Bigger. Stronger. Faster.</p>
+            <p class="footer-sub">Elite, data-driven athlete development.</p>
+
+            <div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+              <a href="https://www.instagram.com/bsfperformance/" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Instagram" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/BSFpitching" target="_blank" rel="noopener noreferrer" aria-label="Follow BSF Performance on Twitter/X" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@bsf_pitching" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to BSF Performance on YouTube" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="difference.html">The BSF Difference</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="locations/lockport.html">Lockport</a></li>
+            <li><a href="locations/bensenville.html">Bensenville</a></li>
+            <li><a href="locations/columbus.html">Columbus</a></li>
+            <li><a href="remote.html">Remote Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="success.html">Athlete Success</a></li>
+            <li><a href="about.html">About & Coaches</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p class="footer-tagline">
+            <a href="mailto:info@bsfperformance.com" style="color:inherit;">info@bsfperformance.com</a><br>
+            <a href="tel:+18153702773" style="color:inherit;" aria-label="Call BSF Performance">(815) 370-2773</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.querySelector('.approach-swiper')) {
+        new Swiper('.approach-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 14,
+          loop: false,
+          speed: 650,
+          navigation: {
+            nextEl: '.approach-swiper .swiper-button-next',
+            prevEl: '.approach-swiper .swiper-button-prev'
+          },
+          pagination: {
+            el: '.approach-swiper .swiper-pagination',
+            clickable: true
+          },
+          breakpoints: {
+            880: {
+              slidesPerView: 2,
+              spaceBetween: 18
+            }
+          }
+        });
+      }
+
+      if (document.querySelector('.tech-swiper')) {
+        new Swiper('.tech-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 14,
+          loop: false,
+          speed: 650,
+          navigation: {
+            nextEl: '.tech-swiper .swiper-button-next',
+            prevEl: '.tech-swiper .swiper-button-prev'
+          },
+          pagination: {
+            el: '.tech-swiper .swiper-pagination',
+            clickable: true
+          },
+          breakpoints: {
+            880: {
+              slidesPerView: 2,
+              spaceBetween: 18
+            }
+          }
+        });
+      }
+
+      if (document.querySelector('.app-swiper')) {
+        new Swiper('.app-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 12,
+          loop: true,
+          speed: 750,
+          autoplay: {
+            delay: 2800,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          },
+          pagination: {
+            el: '.app-swiper .swiper-pagination',
+            clickable: true
+          }
+        });
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
