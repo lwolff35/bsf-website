@@ -845,6 +845,152 @@ section::before {
   transform: scale(1.02);
 }
 
+/* Book a Call button (outline) */
+.btn-book {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.9);
+  color: #FFFFFF !important;
+  font-weight: 500;
+}
+.btn-book:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+  transform: scale(1.02);
+}
+.section-light .btn-book {
+  border-color: #0a0a0a;
+  color: #0a0a0a !important;
+}
+.section-light .btn-book:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.cta-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+.cta-pair.cta-left { justify-content: flex-start; }
+@media (max-width: 768px) {
+  .cta-pair.cta-left { justify-content: center; }
+}
+@media (max-width: 640px) {
+  .cta-pair,
+  .cta-pair.cta-left {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-pair .btn {
+    width: 100%;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+.mobile-nav-cta + .mobile-nav-cta { margin-top: -0.75rem; }
+
+/* Location program boxes (symmetrical) */
+.program-grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+.program-grid.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin: 0 auto; }
+.program-box {
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+}
+.program-box .program-tag {
+  justify-self: start;
+  align-self: start;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 0;
+  margin-bottom: 1.1rem;
+}
+.program-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  text-transform: uppercase;
+  margin: 0 0 0.875rem;
+  align-self: start;
+}
+.program-box p {
+  color: rgba(0,0,0,0.8);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+.program-box a {
+  align-self: end;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+.program-box a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .program-grid, .program-grid.cols-2 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .program-box { margin-bottom: 1.5rem; }
+}
+
+/* Contact: book-a-call banner */
+.book-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+  text-align: left;
+}
+.book-banner-text strong {
+  display: block;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+.book-banner-text span {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.book-banner .btn {
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 2.25rem;
+}
+@media (max-width: 640px) {
+  .book-banner { flex-direction: column; text-align: center; }
+  .book-banner .btn { width: 100%; }
+}
+
 /* Remove duplicate - already defined above */
 
 /* ==================== CARDS ==================== */
@@ -2289,6 +2435,21 @@ section::before {
   border-radius: 16px;
   padding: 3rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.contact-book-block {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.funnel-book-note {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.funnel-book-note a {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .contact-email-block {
