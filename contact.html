@@ -333,8 +333,8 @@
     }
 
     @media (max-width: 640px) {
-      .funnel-hero { min-height: 0; }
-      .funnel-shell { padding: 1.25rem 0 1.5rem; margin: 0 auto; }
+      .funnel-hero { min-height: calc(100vh - 60px); min-height: calc(100svh - 60px); }
+      .funnel-shell { padding: 1.25rem 0 1.5rem; margin: 0 auto auto; }
       .funnel-header { margin-bottom: 1rem; }
       .funnel-stage { min-height: 0; padding: 1rem; }
       .funnel-stage .funnel-back { margin-top: 0.75rem; }
@@ -498,20 +498,9 @@
     <div class="container">
       <div class="contact-form-wrapper">
         <div class="form-header">
-          <span class="form-label">TALK TO US FIRST</span>
-          <h2>Book a Call With Our Team</h2>
-          <p class="form-description">Training at BSF is an investment. Hop on a quick call and we'll walk you through the right program, location, and next steps for your athlete.</p>
-        </div>
-        
-        <div class="contact-book-block" id="bookCall">
-          <a href="https://bookings.cloud.microsoft/book/BSFPerformance@bojacksonselitesports.com/" target="_blank" rel="noopener" class="btn-modern btn-primary-modern">
-            <span>Book a Call</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <p class="contact-email-hint" style="margin-top: 1rem;">Prefer email? Reach us below.</p>
+          <span class="form-label">PREFER EMAIL?</span>
+          <h2>Email Our Team</h2>
+          <p class="form-description">Send us a note and we'll point you to the right program, location, and coach for your athlete.</p>
         </div>
 
         <div class="contact-email-block" id="contactEmail">
@@ -714,7 +703,7 @@
         <span class="cta-label">TRAINING</span>
         <h2>Ready to Start Training?</h2>
         <p>Share your goals and we will connect you with the right performance coach.</p>
-        <a href="#bookCall" class="btn-modern btn-primary-modern">
+        <a href="#trainingRouteFunnel" class="btn-modern btn-primary-modern">
           <span>Start My Success Story</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
