@@ -892,6 +892,10 @@ section::before {
   }
 }
 .mobile-nav-cta + .mobile-nav-cta { margin-top: -0.75rem; }
+/* Mobile menu: size to the visible screen (iOS Safari toolbars) and scroll as one panel */
+.mobile-nav { top: 60px; bottom: 0; height: calc(100vh - 60px); height: calc(100dvh - 60px); overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); }
+.mobile-nav-list { flex: 0 0 auto; overflow: visible; }
+.mobile-nav-cta { flex-shrink: 0; }
 
 /* Location program boxes (symmetrical) */
 .program-grid {
