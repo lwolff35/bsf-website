@@ -303,6 +303,14 @@
       }
     }
 
+    .coaches-desktop.grid-4 .card { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .coaches-desktop.grid-4 h3 { font-size: 1.3rem !important; white-space: nowrap; }
+    .coaches-desktop.grid-4 a[href^="mailto:"] { font-size: 0.75rem; }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .coaches-desktop.grid-4 { grid-template-columns: repeat(2, 1fr) !important; max-width: 760px !important; }
+    }
+
     @media (min-width: 769px) {
       .facility-mobile { display: none !important; }
       .coaches-mobile { display: none !important; }
@@ -638,10 +646,10 @@
           <a href="/pitching">Learn More →</a>
         </div>
         <div class="program-box">
-          <span class="program-tag">Coming Soon</span>
+          <span class="program-tag">Launching 12.1.26</span>
           <h3>Hitting Performance</h3>
           <p>Data-driven hitting development is coming to BSF Lockport: bat speed, exit velocity, and swing training backed by the same testing system.</p>
-          <a href="https://bookings.cloud.microsoft/book/BSFPerformance@bojacksonselitesports.com/" target="_blank" rel="noopener">Book a Call to Learn More →</a>
+          <a href="/hitting">Join the Waitlist →</a>
         </div>
         <div class="program-box">
           <span class="program-tag">Weight Room Only</span>
@@ -916,7 +924,7 @@
       </div>
 
       <!-- Desktop Grid -->
-      <div class="grid grid-3 coaches-desktop" style="max-width: 1200px; margin: 0 auto;">
+      <div class="grid grid-4 coaches-desktop" style="max-width: 1200px; margin: 0 auto;">
         <!-- Brett Velon -->
         <div class="card reveal stagger-1">
           <div style="overflow: hidden; aspect-ratio: 1/1; margin-bottom: 1rem;">
@@ -934,7 +942,7 @@
           </div>
           <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">RYAN MCWILLIAMS</h3>
           <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Pitching Performance</p>
-          <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:rmcwilliams@bojacksonselitesports.com" style="color: inherit; text-decoration: underline;">rmcwilliams@bojacksonselitesports.com</a></p>
+          <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:rmcwilliams@bojacksonselitesports.com" style="color: inherit; text-decoration: underline;">rmcwilliams@<wbr>bojacksonselitesports.com</a></p>
         </div>
 
         <!-- Collin Sharman -->
@@ -945,6 +953,16 @@
           <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">COLLIN SHARMAN</h3>
           <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Remote Performance</p>
           <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:csharman@bsfperformance.com" style="color: inherit; text-decoration: underline;">csharman@bsfperformance.com</a></p>
+        </div>
+
+        <!-- Bobby Atkinson -->
+        <div class="card reveal stagger-4">
+          <div style="overflow: hidden; aspect-ratio: 1/1; margin-bottom: 1rem;">
+            <img src="../images/bobby-atkinson.webp" alt="Bobby Atkinson Director of Hitting Performance at BSF Performance Lockport" class="coach-photo" width="1200" height="1800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">BOBBY ATKINSON</h3>
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Hitting Performance</p>
+          <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:batkinson@bsfperformance.com" style="color: inherit; text-decoration: underline;">batkinson@bsfperformance.com</a></p>
         </div>
       </div>
       
@@ -968,7 +986,7 @@
               </div>
               <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">RYAN MCWILLIAMS</h3>
               <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Pitching Performance</p>
-              <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:rmcwilliams@bojacksonselitesports.com" style="color: inherit; text-decoration: underline;">rmcwilliams@bojacksonselitesports.com</a></p>
+              <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:rmcwilliams@bojacksonselitesports.com" style="color: inherit; text-decoration: underline;">rmcwilliams@<wbr>bojacksonselitesports.com</a></p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -979,6 +997,16 @@
               <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">COLLIN SHARMAN</h3>
               <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Remote Performance</p>
               <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:csharman@bsfperformance.com" style="color: inherit; text-decoration: underline;">csharman@bsfperformance.com</a></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <div style="overflow: hidden; aspect-ratio: 1/1; margin-bottom: 1rem;">
+                <img src="../images/bobby-atkinson.webp" alt="Bobby Atkinson Director of Hitting Performance at BSF Performance Lockport" class="coach-photo" width="1200" height="1800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+              </div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">BOBBY ATKINSON</h3>
+              <p class="eyebrow" style="margin-bottom: 0.5rem;">Director of Hitting Performance</p>
+              <p style="font-size: 0.8rem; color: rgba(0,0,0,0.6);"><a href="mailto:batkinson@bsfperformance.com" style="color: inherit; text-decoration: underline;">batkinson@bsfperformance.com</a></p>
             </div>
           </div>
         </div>
@@ -1040,6 +1068,7 @@
             <li><a href="/difference">The BSF Difference</a></li>
             <li><a href="/training">Training Programs</a></li>
             <li><a href="/pitching">Pitching Performance</a></li>
+            <li><a href="/hitting">Hitting Performance</a></li>
             <li><a href="/strength-conditioning">Strength &amp; Conditioning</a></li>
             <li><a href="/fastpitch">Fastpitch Softball</a></li>
             <li><a href="/locations/lockport">Lockport</a></li>
