@@ -5313,11 +5313,23 @@ a.program-badge:hover {
     margin-bottom: 0.75rem;
   }
   
+  /* Link lists: full width, two even columns so both sides balance */
+  .footer-col:nth-child(2),
+  .footer-col:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
   .footer-col ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.75rem;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .footer-col ul li {
+    flex: 0 0 50%;
   }
   
   .footer-col ul li {

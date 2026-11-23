@@ -61,7 +61,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=20261117d">
+  <link rel="stylesheet" href="styles.css?v=20261123a">
   <style>
     html {
       scroll-behavior: smooth;
@@ -937,6 +937,9 @@
               <button type="button" class="funnel-card" data-step="program" data-value="pitching">
                 <span class="funnel-card-title">Pitching Performance</span>
               </button>
+              <button type="button" class="funnel-card" data-step="program" data-value="hitting">
+                <span class="funnel-card-title">Hitting Performance</span>
+              </button>
               <button type="button" class="funnel-card" data-step="program" data-value="strength-and-conditioning">
                 <span class="funnel-card-title">Strength &amp; Conditioning</span>
               </button>
@@ -1055,6 +1058,22 @@
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                   <span>brett@bojacksonselitesports.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="staff-card">
+              <div class="staff-info">
+                <h4>Bobby Atkinson</h4>
+                <span class="staff-role">Director of Hitting Performance</span>
+              </div>
+              <div class="staff-contact">
+                <a href="mailto:batkinson@bsfperformance.com" class="contact-method">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>batkinson@bsfperformance.com</span>
                 </a>
               </div>
             </div>
@@ -1329,6 +1348,12 @@
         'in-house|strength-and-conditioning|columbus': {
           destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=5351&GroupID=3777473#SelectRegistrationType'
         },
+        'in-house|hitting|lockport': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=4178543'
+        },
+        'remote|hitting|remote': {
+          destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=4178514'
+        },
         'remote|pitching|remote': {
           destination: 'https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&GroupID=3361021'
         },
@@ -1388,19 +1413,21 @@
       }
 
       function setLocationAvailability() {
-        const onlyBensenville = state.program === 'fastpitch';
+        // Some programs run at a single location: Fastpitch (Bensenville), Hitting (Lockport).
+        const onlyLocation = { fastpitch: 'bensenville', hitting: 'lockport' }[state.program] || '';
         locationButtons.forEach((button) => {
-          const isBensenville = button.dataset.value === 'bensenville';
           button.disabled = false;
-          const shouldHide = onlyBensenville && !isBensenville;
+          const shouldHide = Boolean(onlyLocation) && button.dataset.value !== onlyLocation;
           button.hidden = shouldHide;
           button.classList.toggle('is-hidden', shouldHide);
         });
 
         if (fastpitchLocationNotice) {
-          fastpitchLocationNotice.textContent = onlyBensenville
+          fastpitchLocationNotice.textContent = state.program === 'fastpitch'
             ? 'Fastpitch is currently available only at Bensenville.'
-            : '';
+            : state.program === 'hitting'
+              ? 'Hitting is currently available only at Lockport.'
+              : '';
         }
       }
 
