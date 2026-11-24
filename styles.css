@@ -3134,6 +3134,17 @@ section::before {
   }
 }
 
+/* Tablet: the centered desktop menu needs ~1000px, so use the hamburger menu below that */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 /* ==================== RESPONSIVE BREAKPOINTS ==================== */
 @media (max-width: 1200px) {
   :root {
