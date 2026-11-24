@@ -285,7 +285,7 @@
         padding: 2rem 0 !important;
       }
       
-      #pricing .grid-3 {
+      #pricing .grid-4 {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
       }
@@ -324,6 +324,17 @@
     
     .facility-image.colored {
       filter: grayscale(0%) contrast(1.1) brightness(1.05) !important;
+    }
+    .pricing-grid-4 { align-items: stretch; }
+    .pricing-grid-4 .pricing-card { display: flex; flex-direction: column; padding: 2.5rem 1.5rem; }
+    .pricing-grid-4 .pricing-card h3 { font-size: 1.3rem !important; }
+    .pricing-grid-4 .pricing-card .btn { margin-top: auto !important; }
+    .pricing-grid-4 .pricing-card .subtext { margin-bottom: 1.5rem; }
+    .pricing-grid-4 .pricing-amount { margin: 1.25rem 0 0 !important; }
+    .pricing-grid-4 .pricing-card .subtext { margin-top: 1.5rem !important; }
+    .pricing-grid-4 .pricing-card > div[style*="position: absolute"] { white-space: nowrap; }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .pricing-grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem 1.5rem !important; }
     }
   </style>
   <script type="application/ld+json">
@@ -863,7 +874,7 @@
         <h2 class="reveal" style="font-size: 2.5rem; font-weight: 700;">PRICING</h2>
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-4 pricing-grid-4">
         <!-- Pitching Performance - Month to Month -->
         <div class="pricing-card reveal stagger-1">
           <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">PITCHING PERFORMANCE</h3>
@@ -891,13 +902,25 @@
           <a href="/contact" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">GET STARTED</a>
         </div>
 
-        <!-- Strength & Conditioning -->
+        <!-- Hitting Performance - Founders -->
         <div class="pricing-card reveal stagger-3">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">HITTING PERFORMANCE</h3>
+          <p class="eyebrow" style="margin-bottom: 1rem;">Founders Membership</p>
+          <span class="pricing-amount">$400<span style="font-size: 1.125rem; font-weight: 500; color: rgba(0,0,0,0.6);">/mo</span></span>
+          <p class="subtext" style="font-size: 0.9rem; color: rgba(0,0,0,0.7); margin-top: 2rem;">
+            <strong>Includes Strength &amp; Conditioning</strong><br>
+            FREE initial assessment. Month&#8209;to&#8209;month, rate locked in by 12/31/26.
+          </p>
+          <a href="https://tms.ezfacility.com/OnlineRegistrations/Register.aspx?CompanyID=477&amp;GroupID=4178543" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" target="_blank" rel="noopener">GET STARTED</a>
+        </div>
+
+        <!-- Strength & Conditioning -->
+        <div class="pricing-card reveal stagger-4">
           <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0a0a0a; font-weight: 700;">STRENGTH & CONDITIONING</h3>
           <p class="eyebrow" style="margin-bottom: 1rem;">Monthly Membership</p>
           <span class="pricing-amount">$250<span style="font-size: 1.125rem; font-weight: 500; color: rgba(0,0,0,0.6);">/mo</span></span>
           <p class="subtext" style="font-size: 0.9rem; color: rgba(0,0,0,0.7); margin-top: 2rem;">
-            For athletes who only want weight room training. Pitchers: S&amp;C is already included in Pitching Performance.
+            For athletes who only want weight room training. S&amp;C is already included in Pitching and Hitting Performance.
           </p>
           <a href="/contact" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">GET STARTED</a>
         </div>
@@ -909,7 +932,7 @@
         <p style="font-size: 0.9rem; line-height: 1.7; color: rgba(0,0,0,0.75);">
           All memberships are auto-renewing unless written notice is received before the renewal date. 
           No refunds or credits will be issued for unused months. Memberships cannot be paused. 
-          Early cancellation fees apply to 12-month commitments. All athletes must complete a <a href="/training#metric" style="color: var(--accent); text-decoration: underline;">Metric Testing Evaluation</a> before starting training (one-time fee of $300). Athletes are retested every 8–12 weeks so we can measure progress and adjust programming.
+          Early cancellation fees apply to 12-month commitments. All athletes must complete a <a href="/training#metric" style="color: var(--accent); text-decoration: underline;">Metric Testing Evaluation</a> before starting training (one-time fee of $300, waived for BSF Hitting Founders Members). Athletes are retested every 8–12 weeks so we can measure progress and adjust programming.
         </p>
       </div>
     </div>
